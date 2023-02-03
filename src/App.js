@@ -1,6 +1,6 @@
 import React from 'react';
 import {Home} from './components/Home.js'
-import Navbar from './components/Navbar'
+import HomepageNavbar from './components/HomepageNavbar'
 
 
 function App() {
@@ -11,8 +11,8 @@ function App() {
         
        
       </header>
-      <Home/>
-      <Navbar/>
+      {/* <Home/> */}
+      <HomepageNavbar/>
     </div>
   );
 }
