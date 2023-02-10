@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, NavDropdown, Nav, Navbar } from "react-bootstrap";
 import { InputGroup, FormControl }  from "react-bootstrap";
-import Image from 'react-bootstrap/Image'
 
 function HomepageNavbar() {
   return (
@@ -68,7 +67,6 @@ function HomepageNavbar() {
             <InputGroup.Text id='search' className="mr-0">Search</InputGroup.Text>
           </InputGroup>
       </Navbar>
-      <Image src='https://harthouse.ca/assets/images/uploads/events/_lg-max/hh_events_tastes_of_culture_2021_22.png'></Image>
     </>
   );
 }
