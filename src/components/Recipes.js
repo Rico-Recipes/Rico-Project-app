@@ -4,7 +4,6 @@ function Recipes({ data }) {
 
     return (
 
-
         <div>
 
             {
@@ -12,13 +11,11 @@ function Recipes({ data }) {
                     <section key={recipe.id}>
                         <h3>{recipe.title}</h3>
                         <p>{recipe.type}</p>
+                        <img src={recipe.img_src} alt='' />
                     </section>
                 ))
             }
         </div>
-
-
-
 
     )
 }

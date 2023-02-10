@@ -11,9 +11,10 @@ function RecipeType ({ data }) {
             <h1>This is the {recipeType} page</h1>
             {
                 data.filter(recipe => recipe.type === recipeType).map(filteredRecipe => (
-                    <section>
+                    <section key={filteredRecipe.id}>
                         <h3>{filteredRecipe.title}</h3>
                         <p>{filteredRecipe.type}</p>
+                        <img src={filteredRecipe.img_src} alt='' />
                     </section>
                 ))
             }
