@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import Recipe from './Recipe';
 
 function RecipeType ({ data }) {
 
@@ -12,7 +13,9 @@ function RecipeType ({ data }) {
             {
                 data.filter(recipe => recipe.type === recipeType).map(filteredRecipe => (
                     <section key={filteredRecipe.id}>
-                        <h3>{filteredRecipe.title}</h3>
+                        <Link to={`${filteredRecipe.title}`} relative='path' element={<Recipe />}>
+                            <h3>{filteredRecipe.title}</h3>
+                        </Link>
                         <p>{filteredRecipe.type}</p>
                         <img src={filteredRecipe.img_src} alt='' />
                     </section>
