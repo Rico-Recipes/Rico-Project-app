@@ -1,23 +1,40 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+import { Container, Row, Col, Button, Card } from 'react-bootstrap';
+import Recipe from './Recipe';
+
 function Recipes({ data }) {
 
     return (
 
+        <Container>
 
-        <div>
+            <Row>
 
-            {
-                data.map(recipe => (
-                    <section key={recipe.id}>
-                        <h3>{recipe.title}</h3>
-                        <p>{recipe.type}</p>
-                    </section>
-                ))
-            }
-        </div>
+                {
+                    data.map(recipe => (
 
+                        <Col sm={6}>
+                            <Link
+                                to={`${recipe.type}/${recipe.title}`}
+                            >
+                                <Card key={recipe.id} className='bg-dark text-white'>
 
+                                    <Card.Img
+                                        src={recipe.img_src}
+                                        alt=''
+                                    />
+                                    <Card.ImgOverlay>
+                                        <Card.Title>{recipe.title}</Card.Title>
+                                    </Card.ImgOverlay>
+                                </Card>
+                            </Link>
+                        </Col>
+                    ))
+                }
+            </Row>
+        </Container>
 
 
     )

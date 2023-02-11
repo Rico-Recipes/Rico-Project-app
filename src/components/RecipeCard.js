@@ -1,9 +1,13 @@
 import React from 'react'
 
-function RecipeCard () {
+import { Card } from 'react-bootstrap';
+
+function RecipeCard (props) {
 
     return (
-      <div>RecipeCard</div>
+      <Card>
+        {props.children}
+      </Card>
     )
   }
 
