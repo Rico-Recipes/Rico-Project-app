@@ -113,6 +113,7 @@ const worldTourRecipes = [
     },
   },
 ]
+import Footer from './components/Footer.js';
 
 const DUMMY_DATA = [
   {
@@ -287,6 +288,7 @@ function App() {
           }
         />
       </Routes>
+      <Footer/>
     </div>
   );
 }
