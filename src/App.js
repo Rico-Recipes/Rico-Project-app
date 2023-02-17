@@ -7,6 +7,112 @@ import Recipes from './components/Recipes'
 import RecipeType from './components/RecipeType.js';
 import Recipe from './components/Recipe';
 
+const worldTourRecipes = [
+  {
+    id: 8,
+    title: 'spaghetoni profumati',
+    type: 'italy',
+    img_src: 'https://rms.condenast.it/rms/public/5d3/f08/7e8/thumb_2859_1200_670_0_0_auto.jpg',
+    recipe_info: {
+      ingredients: ['1 LB.of thick spaghetti','4 OZ.of homestyle bread(any crusty bread)',
+        '1 / 2 CUP of Grana Padano cheese, grated','2 OZ.of mixed herbs(thyme, wild fennel, rosemary, mint, parsley, marjoram)','lemon','bay leaves','extra - virgin olive oil',
+        'salt'],
+      instructions: ['For the breadcrumbs: Chop the mixed herbs together. Heat the bread in a pan with a drizzle of oil and squeeze a bit of lemon juice on top. Remove the bread from the pan, season with about 1 oz. chopped herbs and 2 Tbsp. oil and blend everything together.', 'Bring a pot of water to a boil with a large pinch of salt, 2 bay leaves, and a pinch of chopped herbs. Cook the pasta in the fragrant water until al dente.', 'In the meantime, for the flavored oil: add the remaining chopped herbs and a squeeze of lemon juice to 1/2 cup oil.', 'Strain the pasta, reserving a bit of the pasta cooking water, and transfer back to the pot. Toss with the flavored oil, bread crumbs with herbs, Grana Padano cheese, and a bit of the cooking water. Cook for 30 seconds and serve.'
+        ],
+    },
+  },
+  {
+    id: 9,
+    title: 'sea bass tortelli in fish broth',
+    type: 'italy',
+    img_src: 'https://rms.condenast.it/rms/public/5df/0f6/eaf/thumb_5592_1200_670_0_0_auto.jpg',
+    recipe_info: {
+      ingredients: [],
+      instructions: [],
+    },
+  },
+  {
+    id: 10,
+    title: 'sorrento-style cannelloni',
+    type: 'italy',
+    img_src: 'https://rms.condenast.it/rms/public/5fa/2a8/0a0/thumb_6659_450_450_0_0_crop.jpg',
+    recipe_info: {
+      ingredients: [],
+      instructions: [],
+    },
+  },
+  {
+    id: 11,
+    title: 'pasticciotto tart with cream and black cherries',
+    type: 'italy',
+    img_src: 'https://rms.condenast.it/rms/public/602/aa3/987/thumb_6815_450_450_0_0_crop.jpg',
+    recipe_info: {
+      ingredients: [],
+      instructions: [],
+    },
+  },
+  {
+    id: 12,
+    title: 'bacon, cheddar, and onion quiche',
+    type: 'france',
+    img_src: 'https://www.foodandwine.com/thmb/YJ3gqRL4MP5grWcw7Q9NZb13Fgo=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/201112-xl-bacon-cheddar-and-onion-quiche-8a9c57a0654a49a49865e69cf3c7cf0b.jpg',
+    recipe_info: {
+      ingredients: ['Pastry', '2 cups all- purpose flour', '1/2 teaspoon salt', '1/4 teaspoon freshly ground black pepper', '1 1 / 2 sticks cold unsalted butter, cut into small pieces', '1/2 cup ice water'],
+      instructions: ['In a medium bowl, whisk together the flour, salt and pepper. Using a pastry cutter or 2 knives, cut in the butter until it resembles small peas. Sprinkle the water on top and mix until the dough begins to come together. Turn the pastry out onto a work surface and gently knead 2 or 3 times, just until it comes together. Pat the pastry into a disk, wrap in plastic and refrigerate until thoroughly chilled, 1 hour.', 'On a lightly floured work surface, roll out the pastry to a 12-inch round, about 1/8 inch thick. Ease the pastry into an 11-inch fluted tart pan with a removable bottom. Trim the overhang so it is flush with the rim of the tart pan. Refrigerate the tart shell for 20 minutes.', 'Preheat the oven to 375°. Line the tart shell with aluminum foil and fill to the top with pie weights or dried beans. Bake for about 50 minutes, until the pastry is golden. Remove the foil and weights and bake the shell for about 25 minutes longer, until richly browned and crisp. Transfer to a rack to cool, for about 10 minutes. Turn the oven down to 325°.'],
+    },
+  },
+  {
+    id: 13,
+    title: 'chicken basquaise',
+    type: 'france',
+    img_src: 'https://www.saveur.com/uploads/2019/02/08/E42B54E7FHVCG2H7X5QAHSXESA.jpg?auto=webp&auto=webp&optimize=high&quality=70&width=720&dpr=1',
+    recipe_info: {
+      ingredients: [],
+      instructions: [],
+    },
+  },
+  {
+    id: 14,
+    title: 'barigoule of spring vegetables',
+    type: 'france',
+    img_src: 'https://www.saveur.com/uploads/2019/03/18/GJRZDINWLLLI5MSE6GOP4NGQPE.jpg?auto=webp&auto=webp&optimize=high&quality=70&width=720&dpr=1',
+    recipe_info: {
+      ingredients: [],
+      instructions: [],
+    },
+  },
+  {
+    id: 14,
+    title: 'gateau basque',
+    type: 'france',
+    img_src: 'https://www.saveur.com/uploads/2019/02/08/URGVKJ7RNRC6ITIUZ7PNNNHN6Q.jpg?auto=webp&auto=webp&optimize=high&quality=70&width=720&dpr=1',
+    recipe_info: {
+      ingredients: [],
+      instructions: [],
+    },
+  },
+  {
+    id: 15,
+    title: 'casa dragones guacamole',
+    type: 'mexico',
+    img_src: 'https://www.saveur.com/uploads/2019/03/18/DYJJ7E56WUXVLG32GM4YLAL4DM.jpg?auto=webp&auto=webp&optimize=high&quality=70&width=720&dpr=1',
+    recipe_info: {
+      ingredients: [],
+      instructions: [],
+    },
+  },
+  {
+    id: 16,
+    title: 'tostadas de camaron seco',
+    type: 'mexico',
+    img_src: 'https://www.saveur.com/uploads/2019/03/18/IY6AWACD76PABJ7X7MULDAIHNI.jpg?auto=webp&auto=webp&optimize=high&quality=70&width=720&dpr=1',
+    recipe_info: {
+      ingredients: [],
+      instructions: [],
+    },
+  },
+]
+
 const DUMMY_DATA = [
   {
     id: 1,
