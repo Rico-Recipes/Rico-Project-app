@@ -1,9 +1,9 @@
 import React from "react";
-import { Container, NavDropdown, Nav, Navbar, Row, Col, Image } from "react-bootstrap";
+import { Container, NavDropdown, Nav, Navbar, Row, Col, Image, Button } from "react-bootstrap";
 import { InputGroup, FormControl } from "react-bootstrap";
 import logo from "../assets/images/ricologo.jpg"
 
-function HomepageNavbar() {
+function HomepageNavbar({ handleRecipeSearch, handleSubmit }) {
   return (
     <>
       <Container fluid >
@@ -30,11 +30,11 @@ function HomepageNavbar() {
                 {/* <Nav.Link href="#home">Home</Nav.Link>
               <Nav.Link href="#link">Link</Nav.Link> */}
                 <NavDropdown  title="Recipes" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">
+                  <NavDropdown.Item href="/recipes/breakfast">
                     Breakfast
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">Lunch</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">Dinner</NavDropdown.Item>
+                  <NavDropdown.Item href="/recipes/lunch">Lunch</NavDropdown.Item>
+                  <NavDropdown.Item href="/recipes/dinner">Dinner</NavDropdown.Item>
                   <NavDropdown.Divider />
                   {/* <NavDropdown.Item href="#action/3.4">
                   Separated link
@@ -79,17 +79,20 @@ function HomepageNavbar() {
               </Nav>
             </Navbar.Collapse>
             </Col>
-            <Col xs={6}>
+            <Col xs={4}>
             <InputGroup>
               <FormControl
               // value={search}
-              // aria-label='search'
+                aria-label='Search recipes'
+                placeholder='Search recipes'
               // aria-describedby='search'
-              // onChange={(e) => setSearch(e.target.value)}
+                onChange={handleRecipeSearch}
               />
               
-              <InputGroup.Text id='search' className="mr-0 ">Search</InputGroup.Text>
             </InputGroup>
+            </Col>
+            <Col xs={2}>
+              <Button id='search' className="mr-0" onClick={handleSubmit}>Search</Button>
             </Col>
             
           </Navbar>

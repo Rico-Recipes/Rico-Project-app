@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Link } from 'react-router-dom';
 import { Container, Row, Col, Button, Card } from 'react-bootstrap';
@@ -33,6 +33,15 @@ function Recipes({ data }) {
                         </Col>
                     ))
                 }
+            </Row>
+            <Row>
+                <Col sm={12}>
+                    <Link to='/'>
+                        <Card>
+                            Go Home
+                        </Card>
+                    </Link>
+                </Col>
             </Row>
         </Container>
 
