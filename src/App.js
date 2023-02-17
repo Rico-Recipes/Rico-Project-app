@@ -6,6 +6,7 @@ import { Routes, Route } from 'react-router-dom'
 import Recipes from './components/Recipes'
 import RecipeType from './components/RecipeType.js';
 import Recipe from './components/Recipe';
+import Footer from './components/Footer.js';
 
 const DUMMY_DATA = [
   {
@@ -134,6 +135,7 @@ function App() {
           }
         />
       </Routes>
+      <Footer/>
     </div>
   );
 }
