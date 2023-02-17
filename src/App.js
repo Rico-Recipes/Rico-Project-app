@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Home } from './components/Home.js'
 import HomepageNavbar from './components/HomepageNavbar'
 import { Routes, Route } from 'react-router-dom'
@@ -81,13 +81,35 @@ const DUMMY_DATA = [
 ]
 
 function App() {
+
+  const [filteredRecipesList, setFilteredRecipesList] = useState([...DUMMY_DATA]);
+  const [search, setSearch] = useState('');
+
+  const handleRecipeSearch = (e) => {
+    e.preventDefault();
+    setSearch(e.target.value);
+  };
+
+  const handleSubmit = () => {
+    if (search.length) {
+      const regex = new RegExp(search, 'gi');
+      const filtered = DUMMY_DATA.filter(recipe => {
+        return recipe.title.match(regex) || recipe.title.toLowerCase().includes(search.toLowerCase());
+      });
+
+      setFilteredRecipesList(filtered);
+    } else {
+      setFilteredRecipesList([...DUMMY_DATA]);
+    }
+  }
+
   return (
 
     <div className="App">
       <header className="App-header">
       </header>
 
-      <HomepageNavbar />
+      <HomepageNavbar handleRecipeSearch={handleRecipeSearch} handleSubmit={handleSubmit} />
       <Routes>
         <Route
           path=''
@@ -96,13 +118,13 @@ function App() {
         <Route
           path='recipes'
           element={
-            <Recipes data={DUMMY_DATA} />
+            <Recipes data={filteredRecipesList} />
           }
         />
         <Route
           path='recipes/:recipeType'
           element={
-            <RecipeType data={DUMMY_DATA} />
+            <RecipeType data={filteredRecipesList} />
           }
         />
         <Route
