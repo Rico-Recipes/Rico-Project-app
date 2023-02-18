@@ -67,15 +67,7 @@ function HomepageNavbar({ handleRecipeSearch, handleSubmit }) {
               <Nav className="me-auto">
                 {/* <Nav.Link href="#home">Home</Nav.Link>
               <Nav.Link href="#link">Link</Nav.Link> */}
-                <NavDropdown title="World Tour" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">Italy</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">France</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">Mexico</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.4">
-                    Separated link
-                  </NavDropdown.Item>
-                </NavDropdown>
+                <Nav.Link href="/worldtour">World Tour</Nav.Link>
               </Nav>
             </Navbar.Collapse>
             </Col>

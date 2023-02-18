@@ -6,6 +6,7 @@ import { Routes, Route } from 'react-router-dom'
 import Recipes from './components/Recipes'
 import RecipeType from './components/RecipeType.js';
 import Recipe from './components/Recipe';
+import { WorldTour } from './components/WorldTour.js';
 
 const worldTourRecipes = [
   {
@@ -237,6 +238,12 @@ function App() {
           path='recipes/breakfast/chilaquiles'
           element={
             <Recipe recipeData={DUMMY_DATA[0]} />
+          }
+        />
+        <Route
+          path='worldtour'
+          element={
+            <WorldTour />
           }
         />
       </Routes>
