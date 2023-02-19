@@ -108,42 +108,49 @@ Listeners
           <div class="carousel-box">
             <div class="title">Italy</div>
             <div class="num">01</div>
-            <img src="../assets/images/Italy.jpg" />
+            <img src="../assets/images/Italy.jpg" alt="colosseum"/>
           </div>
         </div>
         <div class="carousel-item">
           <div class="carousel-box">
             <div class="title">Mexico</div>
             <div class="num">02</div>
-            <img src="../assets/images/Mexico.jpg" />
+            <img src="../assets/images/Mexico.jpg" alt="aztec-temple" />
           </div>
         </div>
         <div class="carousel-item">
           <div class="carousel-box">
             <div class="title">France</div>
             <div class="num">03</div>
-            <img src="../assets/images/Paris.jpg" />
+            <img src="../assets/images/Paris.jpg" alt="effiel-tower"/>
           </div>
         </div>
         <div class="carousel-item">
           <div class="carousel-box">
             <div class="title">India</div>
             <div class="num">04</div>
-            <img src="../assets/images/Paris.jpg" />
+            <img src="../assets/images/India.jpg" alt="taj-mahal"/>
           </div>
         </div>
         <div class="carousel-item">
           <div class="carousel-box">
-            <div class="title">Chinese</div>
+            <div class="title">China</div>
             <div class="num">05</div>
-            <img src="../assets/images/Paris.jpg" />
+            <img src="../assets/images/China.jpg" alt="great-wall-of-china"/>
           </div>
         </div>
         <div class="carousel-item">
           <div class="carousel-box">
             <div class="title">Jamaica</div>
             <div class="num">06</div>
-            <img src="../assets/images/Paris.jpg" />
+            <img src="../assets/images/Jamaica.jpg" alt="woman-with-flag"/>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-box">
+            <div class="title">U.S.A</div>
+            <div class="num">07</div>
+            <img src="../assets/images/USA.jpg" alt="statue-of-liberty"/>
           </div>
         </div>
       </div>
