@@ -1,29 +1,30 @@
 body {
  overflow: hidden;
  font-family: 'Roboto', serif;
- // background: linear-gradient(135deg, black, #220033);
+//  background: linear-gradient(135deg, black, #220033);
 }
 
-.worldtour {
   h1{
     color: blue;
   }
- .carousel {
+
+ .xarousel {
   position: relative;
   z-index: 1;
   height: 100vh;
   overflow: hidden;
   pointer-events: none;
+  padding: 20px 20px;
  }
- 
- .carousel-item {
+
+ .xarousel-item {
   --items: 10;
   --width: clamp(150px, 30vw,  300px);
   --height: clamp(200px, 40vw,  400px);
   --x: calc(var(--active) * 800%);
   --y: calc(var(--active) * 200%);
   --rot: calc(var(--active) * 120deg);
-  --opacity: calc(var(--zIndex) / var(--items) * 3 - 2);
+  // --opacity: calc(var(--zIndex) / var(--items) * 3 - 2);
   overflow: hidden;
   position: absolute;
   z-index: var(--zIndex);
@@ -41,7 +42,7 @@ body {
   transform:  translate(var(--x), var(--y)) rotate(var(--rot)) ;
   transition: transform .8s cubic-bezier(0, 0.02, 0, 1);
 
-  .carousel-box {
+  .xarousel-box {
     position: absolute;
     z-index: 1;
     top: 0;
@@ -196,7 +197,7 @@ body {
   --size: 2px;
   transition-duration: .7s;
  }
-}
+
 
 
 
