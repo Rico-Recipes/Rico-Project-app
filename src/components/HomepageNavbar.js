@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, NavDropdown, Nav, Navbar, Row, Col, Image, Button } from "react-bootstrap";
 import { InputGroup, FormControl } from "react-bootstrap";
-import logo from "../assets/images/ricologo.jpg"
+import logo from "../ricologo.jpg"
 
 function HomepageNavbar({ handleRecipeSearch, handleSubmit }) {
   return (
