@@ -1,4 +1,4 @@
-## RICO RECIPES       
+## RICO RECIPES 🍪 🍕 🧑‍🍳  
 
 ## Description
 Rico recipes will ease your days by giving you the best and easiest recipes for home cooking and to enjoy cultures around the world, visit our page and travel around the world with us!
@@ -13,8 +13,15 @@ THEN enjoy it and plan my next day meals!
 * To use the app,first visit our site! .  
 * If you want to run it from your local machine:
 - Go to our official repo, listed below
+## Instructions to run app in dev server:
+** In one terminal window:
 ```bash
-run npm run start
+ 
+ npm run start
+```
+** In another terminal window:
+```bash
+ run npm run sass
 ```
 * Explore
 * Click on recipes to find the category
