@@ -129,34 +129,34 @@ const DUMMY_DATA = [
   },
   {
     id: 2,
-    title: 'overnight oats',
+    title: 'Overnight Oats',
     type: 'breakfast',
     img_src: 'https://flavorthemoments.com/wp-content/uploads/2022/02/blueberry-overnight-oats-2.jpg',
     recipe_info: {
-      ingredients: [],
-      instructions: [],
+      ingredients: ['2 cups old fashioned rolled oats','2 tablespoons chia seeds', '2½ cups unsweetened almond milk', '3 tablespoons pure maple syrup','1 cup fresh blueberries'],
+      instructions: ['Place the oats, chia seeds, almond milk and maple syrup in a large bowl. Stir together until combined. Cover with plastic wrap and store in the fridge overnight. In the morning, stir in blueberries, leaving some for garnish, if desired, and divide into jars or bowls. Top with nuts or coconut flakes, if desired, serve and enjoy!'],
     },
     country: 'USA'
   },
   {
     id: 3,
-    title: 'eggs benedict',
+    title: 'Eggs Benedict',
     type: 'breakfast',
     img_src: 'https://www.carolinescooking.com/wp-content/uploads/2019/03/eggs-Benedict-photo.jpg',
     recipe_info: {
-      ingredients: [],
-      instructions: [],
+      ingredients: ['2 English muffins',	'4 slices ham or Canadian bacon','	1 teaspoon white vinegar', '4 eggs'],
+      instructions: ['Set a pot of water to boil for the eggs.	Split the English muffins and toast them. Set aside, keeping warm if possible. If using Canadian bacon, cook it in skillet or under broiler, or warm if using ham.	Make or warm your Hollandaise sauce. For easy blender sauce, put the yolks, cayenne, mustard and lemon juice in a blender container and blend until smooth. Melt the butter and pour into the yolk mixture with the blender running so that it combines smoothly. Set aside. Lastly, poach the eggs. Add the vinegar to the boiling water, then carefully crack the eggs in to the simmering water. Cook for around 3-4 minutes until the whites are translucent but the yolks are still slightly soft. Remove with a slotted spoon. Assemble the eggs Benedict - make stacks with half a muffin at the bottom, topped with bacon/ham, then a poached egg and topped with the Hollandaise sauce.'],
     },
     country: 'USA'
   },
   {
     id: 4,
-    title: 'boring ham sandwich',
+    title: 'Boring Ham Sandwich',
     type: 'lunch',
     img_src: 'https://hips.hearstapps.com/hmg-prod/images/190322-ham-sandwich-horizontal-1553721016.png',
     recipe_info: {
-      ingredients: [],
-      instructions: [],
+      ingredients: ['1 c. mayonnaise','2 tbsp. freshly chopped parsley','	2 tsp. freshly chopped thyme','1 tbsp. extra-virgin olive oil','2 cloves garlic, minced',' 8 slices crusty bread, such as sourdough or ciabatta','1/2 c. herb mayo','	1/4 c. Dijon mustard','12 slices deli ham','8 slices provolone','1 arugula','1 tomato, thinly sliced','	1/2 red onion, thinly sliced'],
+      instructions: ['In a medium bowl whisk together mayonnaise, parsley, thyme, oil, and garlic. Spread 2 tablespoons herb mayo on 4 slices of bread. Spread 1 tablespoon mustard on the other 4 slices of bread. Top each mayo slice of bread with 3 slices of ham, 2 slices of provolone, arugula, a couple slices of tomato, and red onion. Top with remaining bread slices, mustard side down.'],
     },
     country: 'USA'
   },
@@ -166,8 +166,8 @@ const DUMMY_DATA = [
     type: 'dinner',
     img_src: 'https://assets.epicurious.com/photos/57eab27ecf9338f824b78b4b/master/w_1000,h_667,c_limit/old-fashioned-meat-loaf.jpg',
     recipe_info: {
-      ingredients: [],
-      instructions: [],
+      ingredients: ['2 lbs ground beef, 85% or 90% lean1 med onion, finely chopped 2 large eggs','3 garlic cloves, minced','3 Tbsp ketchup','3 Tbsp fresh parsley, finely chopped','3/4 cup Panko breadcrumbs','1/3 cup milk1 ½ tsp salt, or to taste','1 ½ tsp Italian seasoning','¼ tsp ground black pepper',' ½ tsp ground paprika',' 3/4 cup ketchup',' 1 ½ tsp white vinegar', '2 ½ Tbsp brown sugar',' 1 tsp garlic powder',' ½ tsp onion powder', ' ¼ tsp ground black pepper¼ tsp salt'],
+      instructions: ['Line a 9”x5” loaf pan with parchment paper and preheat oven to 375°F. 	In a large bowl, add all of the ingredients for the meatloaf. Mix well to combine.	Add meat to the loaf pan, gently press meat down and shape evenly and bake meatloaf at 375˚F for 40 minutes. 	In a small bowl, mix all of the ingredients together for the sauce. Spread the sauce over meatloaf then return to oven and bake additional 15-20 minutes or until the internal temperature is 160˚F. Rest meatloaf 10 minutes before slicing. Drizzle with baking juices from the pan.   '],
     },
     country: 'USA'
   },
@@ -177,8 +177,9 @@ const DUMMY_DATA = [
     type: 'lunch',
     img_src: 'https://natashaskitchen.com/wp-content/uploads/2019/01/Caesar-Salad-Recipe-3.jpg',
     recipe_info: {
-      ingredients: [],
-      instructions: [],
+      ingredients: ['1/2 French Baguette, cut in half and thinly sliced (1/4" thick)','3 Tbsp extra virgin olive oil', '1 tsp minced garlic, 2 small cloves','2 Tbsp grated parmesan cheese','2 small garlic cloves, minced (1 tsp)', '2 tsp dijon mustard','1 tsp W,orcestershire sauce', ' 2 tsp fresh lemon juice','1 1/2 tsp red wine vinegar','1/3 cup extra virgin olive oil','1/2 tsp sea salt, or to taste','1/8 tsp black pepper, plus more to serve'],
+      instructions: ['Preheat oven to 350˚F. Cut the baguette in half lengthwise through the top of the baguette then slice diagonally into 1/4" thick pieces. Place the breads onto a baking sheet. 	In a small bowl, combine 3 Tbsp extra virgin olive oil and 1 tsp of finely minced garlic. Drizzle the garlic oil over the croutons and sprinkle the top with 2 Tbsp grated parmesan cheese.	Toss until evenly coated. Spread in a single layer over the baking sheet and bake at 350˚F until light golden and crisp (10-12 minutes), or to desired crispness.', 
+    'How to Make Caesar Salad Dressing:	In a small bowl, whisk together garlic, dijon, Worcestershire, lemon juice and red wine vinegar.Slowly drizzle in extra virgin olive oil while whisking constantly. 	Whisk in 1/2 tsp salt and 1/8 tsp black pepper, or season to taste.	Rinse, dry and chop or tear the romaine into bite-sized pieces. Place in a large serving bowl and sprinkle generously with shredded parmesan cheese and cooled croutons. Drizzle with caesar dressing and toss gently until lettuce is evenly coated.'],
     },
     country: 'USA'
   },
@@ -188,8 +189,8 @@ const DUMMY_DATA = [
     type: 'dinner',
     img_src: 'https://www.lecremedelacrumb.com/wp-content/uploads/2019/03/feat-500x500.jpg',
     recipe_info: {
-      ingredients: [],
-      instructions: [],
+      ingredients: [' 2-4 petite steaks - *see note','salt and pepper to taste',' garlic powder to taste','1 tablespoon olive oil', '2-4 pounds baby potatoes - diced','2-6 tablespoons salted butter - soft enough to mash with a fork, one tablespoon per steak, plus two tablespoons for the potatoes',' 2 teaspoons minced garlic','teaspoon dried Italian herb blend', '1 teaspoon chopped fresh thyme', '1 teaspoon chopped fresh parsley'],
+      instructions: ['Preheat oven to 400 degrees. In a small bowl combine butter, garlic, and dried herbs and set aside. Season steaks generously with salt, pepper, and garlic powder on both sides. Place skillet over medium-high heat and drizzle with oil. Sear steaks for 2-3 minutes one each side until nice and browned. Transfer to a plate and set aside.  	Add potatoes to the skillet, season generously with salt, pepper, and garlic powder and saute 3-5 minutes until browned. Push potatoes to one side of the pan and return steaks to the other side of the pan.  Transfer to oven and cook for 15-20 minutes until potatoes are fork-tender and steak is cooked to your preferred doneness. Immediately after removing from oven, place a dollop of the garlic butter on each steak and the rest on the potatoes and let it melt over the food before stirring the potatoes to coat in butter and then topping with chopped thyme and parsley before serving.  '],
     },
     country: 'USA'
   },
