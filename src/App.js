@@ -118,7 +118,7 @@ const worldTourRecipes = [
 const DUMMY_DATA = [
   {
     id: 1,
-    title: 'Chilaquiles',
+    title: 'chilaquiles',
     type: 'breakfast',
     img_src: 'https://thegourmetinsider.com/wp-content/uploads/2020/09/chilaquiles-rojos-1200x675_01.jpg',
     recipe_info: {
