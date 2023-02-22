@@ -113,21 +113,19 @@ Listeners
 
   return (
     <>
-      <h1>WorldTour</h1>
-
       <div class="xarousel">
         <div class="xarousel-item">
           <div class="xarousel-box">
             <div class="title">Italy</div>
             <div class="num">01</div>
-            <img src="./Italy.jpg" alt="colosseum" />
+            <img src="./assets/images/Italy.jpg" alt="colosseum" />
           </div>
         </div>
         <div class="xarousel-item">
           <div class="xarousel-box">
             <div class="title">Mexico</div>
             <div class="num">02</div>
-            <img src="./Mexico.jpg" alt="aztec-temple" />
+            <img src="./assets/images/Mexico.jpg" alt="aztec-temple" />
           </div>
         </div>
         <div class="xarousel-item">
