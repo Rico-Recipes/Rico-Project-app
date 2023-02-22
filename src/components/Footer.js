@@ -2,18 +2,17 @@ import { React } from "react";
 import {
     AiFillFacebook,
     AiFillTwitterCircle,
-    AiFillInstagram,
-    AiFillApple,
     AiFillGithub
 } from "react-icons/ai"
-import { FaGooglePlay } from "react-icons/fa";
+
+import { Link } from "react-router-dom";
 
 
 
 
 const Footer = () => {
     return (
-        <footer className="page-footer bg-black text-white mr-4 ">
+        <footer className="page-footer bg-black text-white mr-4 mt-5 ">
             <div className="container-fluid  text-md-left">
                 <div className="row">
                     <div className="col-md-6 mt-md-0 mt-3">
@@ -23,20 +22,20 @@ const Footer = () => {
                         <p>&copy; {new Date().getFullYear()} Rico. All rights reserved.</p>
                         <div>
                         </div>
-                    </div>
-                </div>
+                   
                 
                 <b>Social links</b>
                 <div>
                     <AiFillFacebook />
                     <AiFillTwitterCircle />
-                    <AiFillGithub 
-                    src="https://github.com/Rico-Recipes/Rico-Project-app"/>
-                    <AiFillInstagram />
-                    <AiFillApple />
-                    <FaGooglePlay />
+                  <Link  to="https://github.com/Rico-Recipes/Rico-Project-app" >
+                    <AiFillGithub bg='white' />
+                   </Link>  
+                    
+                  
                 </div>
-
+                </div>
+                </div>
             </div>
 
         </footer>
