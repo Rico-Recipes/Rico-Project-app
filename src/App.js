@@ -7,6 +7,7 @@ import Recipes from './components/Recipes'
 import RecipeType from './components/RecipeType.js';
 import Recipe from './components/Recipe';
 import { WorldTour } from './components/WorldTour.js';
+import Footer from './components/Footer.js';
 
 const DUMMY_DATA = [
   {
@@ -181,6 +182,7 @@ function App() {
           }
         />
       </Routes>
+      <Footer/>
     </div>
   );
 }
