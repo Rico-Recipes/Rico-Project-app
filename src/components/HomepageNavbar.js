@@ -9,8 +9,8 @@ function HomepageNavbar({ handleRecipeSearch, handleSubmit }) {
       <Container fluid >
         <Row >
 
-          <Navbar bg="light" expand="lg" >
-          <Col>
+          <Navbar bg="white" expand="lg"  >
+          <Col >
             <Image 
               src={logo}
               roundedCircle
@@ -24,16 +24,16 @@ function HomepageNavbar({ handleRecipeSearch, handleSubmit }) {
               <Navbar.Brand href="#home">Rico</Navbar.Brand>
             </Col> */}
             <Col >
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Toggle aria-controls="basic-navbar-nav"  />
             <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="me-auto">
+              <Nav className="me-auto" >
                 {/* <Nav.Link href="#home">Home</Nav.Link>
               <Nav.Link href="#link">Link</Nav.Link> */}
                 <NavDropdown  title="Recipes" id="basic-nav-dropdown">
                   <NavDropdown.Item href="/recipes/breakfast">
                     Breakfast
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="/recipes/lunch">Lunch</NavDropdown.Item>
+                  <NavDropdown.Item href="/recipes/lunch" >Lunch</NavDropdown.Item>
                   <NavDropdown.Item href="/recipes/dinner">Dinner</NavDropdown.Item>
                   <NavDropdown.Divider />
                   {/* <NavDropdown.Item href="#action/3.4">
