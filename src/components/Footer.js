@@ -3,16 +3,18 @@ import {
     AiFillFacebook,
     AiFillTwitterCircle,
     AiFillInstagram,
-    AiFillApple
+    AiFillApple,
+    AiFillGithub
 } from "react-icons/ai"
 import { FaGooglePlay } from "react-icons/fa";
 
 
 
+
 const Footer = () => {
     return (
-        <footer className="page-footer pt-4 bg-black text-white mr-0 ">
-            <div className="container-fluid text-center text-md-left">
+        <footer className="page-footer bg-black text-white mr-4 ">
+            <div className="container-fluid  text-md-left">
                 <div className="row">
                     <div className="col-md-6 mt-md-0 mt-3">
                         <h2 className="text-white font-bold lowercase italic">
@@ -23,19 +25,19 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-
+                
                 <b>Social links</b>
                 <div>
                     <AiFillFacebook />
                     <AiFillTwitterCircle />
+                    <AiFillGithub 
+                    src="https://github.com/Rico-Recipes/Rico-Project-app"/>
                     <AiFillInstagram />
                     <AiFillApple />
                     <FaGooglePlay />
-
                 </div>
 
             </div>
-
 
         </footer>
     );
