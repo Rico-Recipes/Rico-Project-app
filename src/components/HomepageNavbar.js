@@ -7,9 +7,8 @@ function HomepageNavbar({ handleRecipeSearch, handleSubmit }) {
   return (
     <>
       <Container fluid >
-        <Row >
-
-          <Navbar bg="white" expand="lg"  >
+        <Row>
+          <Navbar bg="white" expand="sm"  >
           <Col >
             <Image 
               src={logo}
@@ -18,58 +17,21 @@ function HomepageNavbar({ handleRecipeSearch, handleSubmit }) {
               height="150"
               className="d-inline-block align-top"
               alt="React Bootstrap logo">
-           </Image>
+            </Image>
             </Col>
-            {/* <Col>
-              <Navbar.Brand href="#home">Rico</Navbar.Brand>
-            </Col> */}
             <Col >
-            <Navbar.Toggle aria-controls="basic-navbar-nav"  />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="me-auto" >
-                {/* <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">Link</Nav.Link> */}
-                <NavDropdown  title="Recipes" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="/recipes/breakfast">
-                    Breakfast
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="/recipes/lunch" >Lunch</NavDropdown.Item>
-                  <NavDropdown.Item href="/recipes/dinner">Dinner</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  {/* <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item> */}
-                </NavDropdown>
-              </Nav>
-            </Navbar.Collapse>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Nav className="me-auto">
+                <Nav.Link href="/recipes/breakfast">Breakfast</Nav.Link>
+                <Nav.Link href="/recipes/lunch">Lunch</Nav.Link>
+                <Nav.Link href="/recipes/dinner">Dinner</Nav.Link>
+            </Nav>
             </Col>
             <Col>
-            <Navbar.Collapse id="basic-navbar-nav">
+            {/* <Navbar.Collapse id="basic-navbar-nav"> */}
               <Nav className="me-auto">
-                {/* <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">Link</Nav.Link> */}
-                <NavDropdown title="Ingredients" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">Eggs</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">Chicken</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">Beef</NavDropdown.Item>
-                  {/* <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item> */}
-                </NavDropdown>
-              </Nav>
-            </Navbar.Collapse>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            </Col>
-            <Col>
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="me-auto">
-                {/* <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">Link</Nav.Link> */}
                 <Nav.Link href="/worldtour">World Tour</Nav.Link>
               </Nav>
-            </Navbar.Collapse>
+            {/* </Navbar.Collapse> */}
             </Col>
             <Col xs={4}>
             <InputGroup>
