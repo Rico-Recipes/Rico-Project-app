@@ -9,10 +9,10 @@ function Recipe ({ recipeData }) {
     return (
         <>
             <h2 style={{margin: '35px auto', textAlign: 'center'}}>{recipeData.title}</h2>
-            <Card style={{width: '75%', margin: 'auto'}}>
+            <Card style={{width: '50%', margin: 'auto'}} bg="black" text='white'>
                 <Card.Img src={recipeData.img_src} alt='' />
                 <Card.Body>
-                    <h4>Ingredients</h4>
+                    <h4 >Ingredients</h4>
                     <ul>
                         {
                             recipeData.recipe_info.ingredients.map(ingredient => (
