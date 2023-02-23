@@ -1,9 +1,6 @@
 body {
   font-family: "Roboto", serif;
-}
-
-h1 {
-  color: blue;
+  cursor: pointer;
 }
 
 .xarousel {
