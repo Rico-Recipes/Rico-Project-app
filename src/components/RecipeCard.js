@@ -1,15 +1,15 @@
-import React from 'react'
+// import React from 'react'
 
-import { Card } from 'react-bootstrap';
+// import { Card } from 'react-bootstrap';
 
-function RecipeCard (props) {
+// function RecipeCard (props) {
 
-    return (
-      <Card>
-        {props.children}
-      </Card>
-    )
-  }
+//     return (
+//       <Card>
+//         {props.children}
+//       </Card>
+//     )
+//   }
 
 
-export default RecipeCard
+// export default RecipeCard

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import "../style.css";
 
 function WorldTour() {
@@ -118,49 +119,63 @@ Listeners
           <div class="xarousel-box">
             <div class="title">Italy</div>
             <div class="num">01</div>
-            <img src="./assets/images/Italy.jpg" alt="colosseum" />
+            <Link href='/worldtour/italy'>
+              <img src="./assets/images/Italy.jpg" alt="colosseum" />
+            </Link>
           </div>
         </div>
         <div class="xarousel-item">
           <div class="xarousel-box">
             <div class="title">Mexico</div>
             <div class="num">02</div>
-            <img src="./assets/images/Mexico.jpg" alt="aztec-temple" />
+            <Link href='/worldtour/mexico'>
+              <img src="./assets/images/Mexico.jpg" alt="aztec-temple" />
+            </Link>  
           </div>
         </div>
         <div class="xarousel-item">
           <div class="xarousel-box">
             <div class="title">France</div>
             <div class="num">03</div>
-            <img src="./assets/images/Paris.jpg" alt="effiel-tower" />
+            <Link href='/worldtour/france'>
+              <img src="./assets/images/Paris.jpg" alt="effiel-tower" />
+            </Link>  
           </div>
         </div>
         <div class="xarousel-item">
           <div class="xarousel-box">
             <div class="title">India</div>
             <div class="num">04</div>
-            <img src="./assets/images/India.jpg" alt="taj-mahal" />
+            <Link href='/worldtour/india'>
+              <img src="./assets/images/India.jpg" alt="taj-mahal" />
+            </Link>  
           </div>
         </div>
         <div class="xarousel-item">
           <div class="xarousel-box">
             <div class="title">China</div>
             <div class="num">05</div>
-            <img src="./assets/images/China.jpg" alt="great-wall-of-china" />
+            <Link href='/worldtour/china'>
+              <img src="./assets/images/China.jpg" alt="great-wall-of-china" />
+            </Link>
           </div>
         </div>
         <div class="xarousel-item">
           <div class="xarousel-box">
             <div class="title">Jamaica</div>
             <div class="num">06</div>
-            <img src="./assets/images/Jamaica.jpg" alt="woman-with-flag" />
+            <Link href='/worldtour/jamaica'>
+              <img src="./assets/images/Jamaica.jpg" alt="woman-with-flag" />
+            </Link>
           </div>
         </div>
         <div class="xarousel-item">
           <div class="xarousel-box">
             <div class="title">U.S.A</div>
             <div class="num">07</div>
-            <img src="./assets/images/USA.jpg" alt="statue-of-liberty" />
+            <Link href='/worldtour/usa'>
+              <img src="./assets/images/USA.jpg" alt="statue-of-liberty" />
+            </Link>
           </div>
         </div>
       </div>
