@@ -7,23 +7,25 @@ import Recipe from './Recipe';
 function Recipes({ data }) {
 
     return (
-
-        <Container>
+ 
+        <Container width={40}>
 
             <Row>
 
                 {
                     data.map(recipe => (
-
-                        <Col sm={6}>
+                        
+                        <Col sm={4}>
                             <Link
                                 to={`${recipe.type}/${recipe.title}`}
                             >
-                                <Card key={recipe.id} className='bg-dark text-white'>
+                                <Card key={recipe.id} style={{padding:6, width:350, margin:30}}className='bg-dark text-white'>
 
                                     <Card.Img
                                         src={recipe.img_src}
-                                        alt=''
+                                        alt='recipesimg'
+                                        width={40}
+                                        height={400}
                                     />
                                     <Card.ImgOverlay>
                                         <Card.Title>{recipe.title}</Card.Title>
@@ -35,8 +37,8 @@ function Recipes({ data }) {
                 }
             </Row>
             <Row>
-                <Col sm={12}>
-                    <Link to='/'>
+                <Col sm={1}>
+                    <Link to='/' style={{textDecoration:'none', color:'black'}}>
                         <Card>
                             Go Home
                         </Card>
