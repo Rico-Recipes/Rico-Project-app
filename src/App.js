@@ -138,6 +138,7 @@ const DUMMY_DATA = [
     },
     country: 'USA'
   },
+  
   {
     id: 3,
     title: 'Eggs Benedict',
