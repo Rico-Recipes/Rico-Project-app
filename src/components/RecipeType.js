@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 import Recipe from './Recipe';
 
@@ -9,22 +9,27 @@ function RecipeType ({ data }) {
 
     return (
         <Container>
-            <Row>
-                <Col>
-                    <h1>This is the {recipeType} page</h1>
-                </Col>
-            </Row>
-            <Row>
+          
+            <Row style={{display:'inline-flex', width:'100%',margin:'auto', padding:10}}>
                 {
                     data.filter(recipe => recipe.type === recipeType).map(filteredRecipe => (
-                        <Col>
-                            <section key={filteredRecipe.id}>
-                                <Link to={`${filteredRecipe.title}`} relative='path' element={<Recipe />}>
+                        <Col sm={4}>
+                                <Link style={{textDecoration:"none",color:'black'}} to={`${filteredRecipe.title}/${filteredRecipe.type}`} relative='path'  element={<Recipe />}>
                                     <h3>{filteredRecipe.title}</h3>
+                                    <Card style={{padding:6, width:350}}key={filteredRecipe.id} className='bg-dark text-white'>
+                                        <Card.Img 
+                                        src={filteredRecipe.img_src} 
+                                        alt='recipetype'
+                                        width={40}
+                                        height={400}
+                                        object-fit='cover'
+                                        />
+                                        <Card.ImgOverlay>
+                                            <Card.Title>{filteredRecipe.type}</Card.Title>
+                                        </Card.ImgOverlay>
+                
+                                    </Card>
                                 </Link>
-                                <p>{filteredRecipe.type}</p>
-                                <img src={filteredRecipe.img_src} alt='' />
-                            </section>
                         </Col>
                     ))
                 }
