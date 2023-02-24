@@ -23,7 +23,6 @@ function WorldTourFiltered({ data }) {
           .map((filteredRecipe) => (
             <Col sm={4}>
                 <h2>{filteredRecipe.title}</h2>
-                <Link>
                 <Card
                   style={{ padding: 6, width: 350 }}
                   key={filteredRecipe.id}
