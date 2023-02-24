@@ -9,111 +9,8 @@ import Recipe from "./components/Recipe";
 import { WorldTour } from "./components/WorldTour.js";
 import Footer from "./components/Footer.js";
 
-// const worldTourRecipes = [
-//   {
-//     id: 8,
-//     title: 'spaghetoni profumati',
-//     type: 'italy',
-//     img_src: 'https://rms.condenast.it/rms/public/5d3/f08/7e8/thumb_2859_1200_670_0_0_auto.jpg',
-//     recipe_info: {
-//       ingredients: ['1 LB.of thick spaghetti','4 OZ.of homestyle bread(any crusty bread)',
-//         '1 / 2 CUP of Grana Padano cheese, grated','2 OZ.of mixed herbs(thyme, wild fennel, rosemary, mint, parsley, marjoram)','lemon','bay leaves','extra - virgin olive oil',
-//         'salt'],
-//       instructions: ['For the breadcrumbs: Chop the mixed herbs together. Heat the bread in a pan with a drizzle of oil and squeeze a bit of lemon juice on top. Remove the bread from the pan, season with about 1 oz. chopped herbs and 2 Tbsp. oil and blend everything together.', 'Bring a pot of water to a boil with a large pinch of salt, 2 bay leaves, and a pinch of chopped herbs. Cook the pasta in the fragrant water until al dente.', 'In the meantime, for the flavored oil: add the remaining chopped herbs and a squeeze of lemon juice to 1/2 cup oil.', 'Strain the pasta, reserving a bit of the pasta cooking water, and transfer back to the pot. Toss with the flavored oil, bread crumbs with herbs, Grana Padano cheese, and a bit of the cooking water. Cook for 30 seconds and serve.'
-//         ],
-//     },
-//   },
-//   {
-//     id: 9,
-//     title: 'sea bass tortelli in fish broth',
-//     type: 'italy',
-//     img_src: 'https://rms.condenast.it/rms/public/5df/0f6/eaf/thumb_5592_1200_670_0_0_auto.jpg',
-//     recipe_info: {
-//       ingredients: [],
-//       instructions: [],
-//     },
-//   },
-//   {
-//     id: 10,
-//     title: 'sorrento-style cannelloni',
-//     type: 'italy',
-//     img_src: 'https://rms.condenast.it/rms/public/5fa/2a8/0a0/thumb_6659_450_450_0_0_crop.jpg',
-//     recipe_info: {
-//       ingredients: [],
-//       instructions: [],
-//     },
-//   },
-//   {
-//     id: 11,
-//     title: 'pasticciotto tart with cream and black cherries',
-//     type: 'italy',
-//     img_src: 'https://rms.condenast.it/rms/public/602/aa3/987/thumb_6815_450_450_0_0_crop.jpg',
-//     recipe_info: {
-//       ingredients: [],
-//       instructions: [],
-//     },
-//   },
-//   {
-//     id: 12,
-//     title: 'bacon, cheddar, and onion quiche',
-//     type: 'france',
-//     img_src: 'https://www.foodandwine.com/thmb/YJ3gqRL4MP5grWcw7Q9NZb13Fgo=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/201112-xl-bacon-cheddar-and-onion-quiche-8a9c57a0654a49a49865e69cf3c7cf0b.jpg',
-//     recipe_info: {
-//       ingredients: ['Pastry', '2 cups all- purpose flour', '1/2 teaspoon salt', '1/4 teaspoon freshly ground black pepper', '1 1 / 2 sticks cold unsalted butter, cut into small pieces', '1/2 cup ice water'],
-//       instructions: ['In a medium bowl, whisk together the flour, salt and pepper. Using a pastry cutter or 2 knives, cut in the butter until it resembles small peas. Sprinkle the water on top and mix until the dough begins to come together. Turn the pastry out onto a work surface and gently knead 2 or 3 times, just until it comes together. Pat the pastry into a disk, wrap in plastic and refrigerate until thoroughly chilled, 1 hour.', 'On a lightly floured work surface, roll out the pastry to a 12-inch round, about 1/8 inch thick. Ease the pastry into an 11-inch fluted tart pan with a removable bottom. Trim the overhang so it is flush with the rim of the tart pan. Refrigerate the tart shell for 20 minutes.', 'Preheat the oven to 375°. Line the tart shell with aluminum foil and fill to the top with pie weights or dried beans. Bake for about 50 minutes, until the pastry is golden. Remove the foil and weights and bake the shell for about 25 minutes longer, until richly browned and crisp. Transfer to a rack to cool, for about 10 minutes. Turn the oven down to 325°.'],
-//     },
-//   },
-//   {
-//     id: 13,
-//     title: 'chicken basquaise',
-//     type: 'france',
-//     img_src: 'https://www.saveur.com/uploads/2019/02/08/E42B54E7FHVCG2H7X5QAHSXESA.jpg?auto=webp&auto=webp&optimize=high&quality=70&width=720&dpr=1',
-//     recipe_info: {
-//       ingredients: [],
-//       instructions: [],
-//     },
-//   },
-//   {
-//     id: 14,
-//     title: 'barigoule of spring vegetables',
-//     type: 'france',
-//     img_src: 'https://www.saveur.com/uploads/2019/03/18/GJRZDINWLLLI5MSE6GOP4NGQPE.jpg?auto=webp&auto=webp&optimize=high&quality=70&width=720&dpr=1',
-//     recipe_info: {
-//       ingredients: [],
-//       instructions: [],
-//     },
-//   },
-//   {
-//     id: 15,
-//     title: 'gateau basque',
-//     type: 'france',
-//     img_src: 'https://www.saveur.com/uploads/2019/02/08/URGVKJ7RNRC6ITIUZ7PNNNHN6Q.jpg?auto=webp&auto=webp&optimize=high&quality=70&width=720&dpr=1',
-//     recipe_info: {
-//       ingredients: [],
-//       instructions: [],
-//     },
-//   },
-//   {
-//     id: 16,
-//     title: 'casa dragones guacamole',
-//     type: 'mexico',
-//     img_src: 'https://www.saveur.com/uploads/2019/03/18/DYJJ7E56WUXVLG32GM4YLAL4DM.jpg?auto=webp&auto=webp&optimize=high&quality=70&width=720&dpr=1',
-//     recipe_info: {
-//       ingredients: [],
-//       instructions: [],
-//     },
-//   },
-//   {
-//     id: 17,
-//     title: 'tostadas de camaron seco',
-//     type: 'mexico',
-//     img_src: 'https://www.saveur.com/uploads/2019/03/18/IY6AWACD76PABJ7X7MULDAIHNI.jpg?auto=webp&auto=webp&optimize=high&quality=70&width=720&dpr=1',
-//     recipe_info: {
-//       ingredients: [],
-//       instructions: [],
-//     },
-//   },
-// ]
+
+
 
 const DUMMY_DATA = [
   {
@@ -155,16 +52,9 @@ const DUMMY_DATA = [
     img_src:
       "https://flavorthemoments.com/wp-content/uploads/2022/02/blueberry-overnight-oats-2.jpg",
     recipe_info: {
-      ingredients: [
-        "2 cups old fashioned rolled oats",
-        "2 tablespoons chia seeds",
-        "2½ cups unsweetened almond milk",
-        "3 tablespoons pure maple syrup",
-        "1 cup fresh blueberries",
-      ],
-      instructions: [
-        "Place the oats, chia seeds, almond milk and maple syrup in a large bowl. Stir together until combined. Cover with plastic wrap and store in the fridge overnight. In the morning, stir in blueberries, leaving some for garnish, if desired, and divide into jars or bowls. Top with nuts or coconut flakes, if desired, serve and enjoy!",
-      ],
+      ingredients: ['2 cups old fashioned rolled oats', '2 tablespoons chia seeds', '2½ cups unsweetened almond milk', '3 tablespoons pure maple syrup', '1 cup fresh blueberries',],
+      instructions: ['Place the oats, chia seeds, almond milk and maple syrup in a large bowl.', 'Stir together until combined.Cover with plastic wrap and store in the fridge overnight', 'In the morning, stir in blueberries, leaving some for garnish, if desired, and divide into jars or bowls.',
+        'Top with nuts or coconut flakes, if desired, serve and enjoy!'],
     },
     country: "USA",
   },
@@ -176,15 +66,8 @@ const DUMMY_DATA = [
     img_src:
       "https://www.carolinescooking.com/wp-content/uploads/2019/03/eggs-Benedict-photo.jpg",
     recipe_info: {
-      ingredients: [
-        "2 English muffins",
-        "4 slices ham or Canadian bacon",
-        "	1 teaspoon white vinegar",
-        "4 eggs",
-      ],
-      instructions: [
-        "Set a pot of water to boil for the eggs.	Split the English muffins and toast them. Set aside, keeping warm if possible. If using Canadian bacon, cook it in skillet or under broiler, or warm if using ham.	Make or warm your Hollandaise sauce. For easy blender sauce, put the yolks, cayenne, mustard and lemon juice in a blender container and blend until smooth. Melt the butter and pour into the yolk mixture with the blender running so that it combines smoothly. Set aside. Lastly, poach the eggs. Add the vinegar to the boiling water, then carefully crack the eggs in to the simmering water. Cook for around 3-4 minutes until the whites are translucent but the yolks are still slightly soft. Remove with a slotted spoon. Assemble the eggs Benedict - make stacks with half a muffin at the bottom, topped with bacon/ham, then a poached egg and topped with the Hollandaise sauce.",
-      ],
+      ingredients: ['2 English muffins', '4 slices ham or Canadian bacon', '1 teaspoon white vinegar', '4 eggs', 'For the Hollandaise sauce', '2 egg yolks', '1 pinch cayenne pepper', '¼ teaspoon Dijon mustard', '1 tablespoon lemon juice', '4 tablespoon butter'],
+      instructions: ['Set a pot of water to boil for the eggs.', 'Split the English muffins and toast them.Set aside, keeping warm if possible.', 'If using Canadian bacon, cook it in skillet or under broiler, or warm if using ham.', 'Make or warm your Hollandaise sauce.For easy blender sauce, put the yolks, cayenne, mustard and lemon juice in a blender container and blend until smooth. Melt the butter and pour into the yolk mixture with the blender running so that it combines smoothly.Set aside.', 'Lastly, poach the eggs. Add the vinegar to the boiling water, then carefully crack the eggs in to the simmering water. Cook for around 3 - 4 minutes until the whites are translucent but the yolks are still slightly soft.Remove with a slotted spoon.', 'Assemble the eggs Benedict - make stacks with half a muffin at the bottom, topped with bacon / ham, then a poached egg and topped with the Hollandaise sauce.'],
     },
     country: "USA",
   },
@@ -195,24 +78,8 @@ const DUMMY_DATA = [
     img_src:
       "https://hips.hearstapps.com/hmg-prod/images/190322-ham-sandwich-horizontal-1553721016.png",
     recipe_info: {
-      ingredients: [
-        "1 c. mayonnaise",
-        "2 tbsp. freshly chopped parsley",
-        "	2 tsp. freshly chopped thyme",
-        "1 tbsp. extra-virgin olive oil",
-        "2 cloves garlic, minced",
-        " 8 slices crusty bread, such as sourdough or ciabatta",
-        "1/2 c. herb mayo",
-        "	1/4 c. Dijon mustard",
-        "12 slices deli ham",
-        "8 slices provolone",
-        "1 arugula",
-        "1 tomato, thinly sliced",
-        "	1/2 red onion, thinly sliced",
-      ],
-      instructions: [
-        "In a medium bowl whisk together mayonnaise, parsley, thyme, oil, and garlic. Spread 2 tablespoons herb mayo on 4 slices of bread. Spread 1 tablespoon mustard on the other 4 slices of bread. Top each mayo slice of bread with 3 slices of ham, 2 slices of provolone, arugula, a couple slices of tomato, and red onion. Top with remaining bread slices, mustard side down.",
-      ],
+      ingredients: ['FOR THE HERB MAYO', '1 c.mayonnaise', '2 tbsp.freshly chopped parsley', '2 tsp.freshly chopped thyme', '1 tbsp.extra - virgin olive oil', '2 cloves garlic, minced', 'FOR THE SANDWICH', '8 slices crusty bread, such as sourdough or ciabatta', '1 / 2 c.herb mayo', '1 / 4 c.Dijon mustard', '12 slices deli ham', '8 slices provolone', '1 arugula', '1 tomato, thinly sliced', '1 / 2 red onion, thinly sliced'],
+      instructions: ['In a medium bowl whisk together mayonnaise, parsley, thyme, oil, and garlic.', 'Spread 2 tablespoons herb mayo on 4 slices of bread.', 'Spread 1 tablespoon mustard on the other 4 slices of bread.', 'Top each mayo slice of bread with 3 slices of ham, 2 slices of provolone, arugula, a couple slices of tomato, and red onion.', 'Top with remaining bread slices, mustard side down.'],
     },
     country: "USA",
   },
@@ -223,26 +90,8 @@ const DUMMY_DATA = [
     img_src:
       "https://assets.epicurious.com/photos/57eab27ecf9338f824b78b4b/master/w_1000,h_667,c_limit/old-fashioned-meat-loaf.jpg",
     recipe_info: {
-      ingredients: [
-        "2 lbs ground beef, 85% or 90% lean1 med onion, finely chopped 2 large eggs",
-        "3 garlic cloves, minced",
-        "3 Tbsp ketchup",
-        "3 Tbsp fresh parsley, finely chopped",
-        "3/4 cup Panko breadcrumbs",
-        "1/3 cup milk 1 ½ tsp salt, or to taste",
-        "1 ½ tsp Italian seasoning",
-        "¼ tsp ground black pepper",
-        " ½ tsp ground paprika",
-        " 3/4 cup ketchup",
-        " 1 ½ tsp white vinegar",
-        "2 ½ Tbsp brown sugar",
-        " 1 tsp garlic powder",
-        " ½ tsp onion powder",
-        " ¼ tsp ground black pepper¼ tsp salt",
-      ],
-      instructions: [
-        "Line a 9”x5” loaf pan with parchment paper and preheat oven to 375°F. 	In a large bowl, add all of the ingredients for the meatloaf. Mix well to combine.	Add meat to the loaf pan, gently press meat down and shape evenly and bake meatloaf at 375˚F for 40 minutes. 	In a small bowl, mix all of the ingredients together for the sauce. Spread the sauce over meatloaf then return to oven and bake additional 15-20 minutes or until the internal temperature is 160˚F. Rest meatloaf 10 minutes before slicing. Drizzle with baking juices from the pan.   ",
-      ],
+      ingredients: ['Meatloaf Ingredients:', '2 lbs ground beef, 85 % or 90 % lean', '1 med onion, finely chopped', '2 large eggs', '3 garlic cloves, minced', '3 Tbsp ketchup', '3 Tbsp fresh parsley, finely chopped', '3 / 4 cup Panko breadcrumbs', '1 / 3 cup milk', '1 ½ tsp salt, or to taste', '1 ½ tsp Italian seasoning', '¼ tsp ground black pepper', '½ tsp ground paprika', 'Meatloaf Sauce Ingredients:', '3 / 4 cup ketchup', '1 ½ tsp white vinegar', '2 ½ Tbsp brown sugar', '1 tsp garlic powder', '½ tsp onion powder', '¼ tsp ground black pepper', '¼ tsp salt'],
+      instructions: ['US Customary - Metric', 'Line a 9”x5” loaf pan with parchment paper and preheat oven to 375°F.', 'In a large bowl, add all of the ingredients for the meatloaf.Mix well to combine.', 'Add meat to the loaf pan, gently press meat down and shape evenly and bake meatloaf at 375˚F for 40 minutes.', 'In a small bowl, mix all of the ingredients together for the sauce.Spread the sauce over meatloaf then return to oven and bake additional 15-20 minutes or until the internal temperature is 160˚F.Rest meatloaf 10 minutes before slicing.Drizzle with baking juices from the pan.'],
     },
     country: "USA",
   },
@@ -253,24 +102,8 @@ const DUMMY_DATA = [
     img_src:
       "https://natashaskitchen.com/wp-content/uploads/2019/01/Caesar-Salad-Recipe-3.jpg",
     recipe_info: {
-      ingredients: [
-        '1/2 French Baguette, cut in half and thinly sliced (1/4" thick)',
-        "3 Tbsp extra virgin olive oil",
-        "1 tsp minced garlic, 2 small cloves",
-        "2 Tbsp grated parmesan cheese",
-        "2 small garlic cloves, minced (1 tsp)",
-        "2 tsp dijon mustard",
-        "1 tsp W,orcestershire sauce",
-        " 2 tsp fresh lemon juice",
-        "1 1/2 tsp red wine vinegar",
-        "1/3 cup extra virgin olive oil",
-        "1/2 tsp sea salt, or to taste",
-        "1/8 tsp black pepper, plus more to serve",
-      ],
-      instructions: [
-        'Preheat oven to 350˚F. Cut the baguette in half lengthwise through the top of the baguette then slice diagonally into 1/4" thick pieces. Place the breads onto a baking sheet. 	In a small bowl, combine 3 Tbsp extra virgin olive oil and 1 tsp of finely minced garlic. Drizzle the garlic oil over the croutons and sprinkle the top with 2 Tbsp grated parmesan cheese.	Toss until evenly coated. Spread in a single layer over the baking sheet and bake at 350˚F until light golden and crisp (10-12 minutes), or to desired crispness.',
-        "How to Make Caesar Salad Dressing:	In a small bowl, whisk together garlic, dijon, Worcestershire, lemon juice and red wine vinegar.Slowly drizzle in extra virgin olive oil while whisking constantly. 	Whisk in 1/2 tsp salt and 1/8 tsp black pepper, or season to taste.	Rinse, dry and chop or tear the romaine into bite-sized pieces. Place in a large serving bowl and sprinkle generously with shredded parmesan cheese and cooled croutons. Drizzle with caesar dressing and toss gently until lettuce is evenly coated.",
-      ],
+      ingredients: ['For the Croutons:', '1 / 2 French Baguette, cut in half and thinly sliced(1 / 4" thick)', '3 Tbsp extra virgin olive oil', '1 tsp minced garlic, 2 small cloves', '2 Tbsp grated parmesan cheese', 'Caesar Salad dressing:', '2 small garlic cloves, minced(1 tsp)', '2 tsp dijon mustard', '1 tsp Worcestershire sauce', '2 tsp fresh lemon juice', '1 1 / 2 tsp red wine vinegar', '1 / 3 cup extra virgin olive oil', '1 / 2 tsp sea salt, or to taste', '1 / 8 tsp black pepper, plus more to serve', 'For the Caesar Salad:', '1 large romaine lettuce, (or 2 small heads romaine)', '1 / 3 cup parmesan cheese, shredded or shaved'],
+      instructions: ['US Customary - Metric', 'How to Make Croutons:', 'Preheat oven to 350˚F.Cut the baguette in half lengthwise through the top of the baguette then slice diagonally into 1 / 4" thick pieces. Place the breads onto a baking sheet.', 'In a small bowl, combine 3 Tbsp extra virgin olive oil and 1 tsp of finely minced garlic.Drizzle the garlic oil over the croutons and sprinkle the top with 2 Tbsp grated parmesan cheese.', 'Toss until evenly coated.Spread in a single layer over the baking sheet and bake at 350˚F until light golden and crisp(10- 12 minutes), or to desired crispness.', 'How to Make Caesar Salad Dressing:', '1	In a small bowl, whisk together garlic, dijon, Worcestershire, lemon juice and red wine vinegar.', 'Slowly drizzle in extra virgin olive oil while whisking constantly.', 'Whisk in 1 / 2 tsp salt and 1 / 8 tsp black pepper, or season to taste.', 'How to Make Caesar Salad:', '1	Rinse, dry and chop or tear the romaine into bite - sized pieces.Place in a large serving bowl and sprinkle generously with shredded parmesan cheese and cooled croutons.Drizzle with caesar dressing and toss gently until lettuce is evenly coated.'],
     },
     country: "USA",
   },
@@ -281,21 +114,9 @@ const DUMMY_DATA = [
     img_src:
       "https://www.lecremedelacrumb.com/wp-content/uploads/2019/03/feat-500x500.jpg",
     recipe_info: {
-      ingredients: [
-        " 2-4 petite steaks - *see note",
-        "salt and pepper to taste",
-        " garlic powder to taste",
-        "1 tablespoon olive oil",
-        "2-4 pounds baby potatoes - diced",
-        "2-6 tablespoons salted butter - soft enough to mash with a fork, one tablespoon per steak, plus two tablespoons for the potatoes",
-        " 2 teaspoons minced garlic",
-        "teaspoon dried Italian herb blend",
-        "1 teaspoon chopped fresh thyme",
-        "1 teaspoon chopped fresh parsley",
-      ],
-      instructions: [
-        "Preheat oven to 400 degrees. In a small bowl combine butter, garlic, and dried herbs and set aside. Season steaks generously with salt, pepper, and garlic powder on both sides. Place skillet over medium-high heat and drizzle with oil. Sear steaks for 2-3 minutes one each side until nice and browned. Transfer to a plate and set aside.  	Add potatoes to the skillet, season generously with salt, pepper, and garlic powder and saute 3-5 minutes until browned. Push potatoes to one side of the pan and return steaks to the other side of the pan.  Transfer to oven and cook for 15-20 minutes until potatoes are fork-tender and steak is cooked to your preferred doneness. Immediately after removing from oven, place a dollop of the garlic butter on each steak and the rest on the potatoes and let it melt over the food before stirring the potatoes to coat in butter and then topping with chopped thyme and parsley before serving.  ",
-      ],
+      ingredients: ['2 - 4 petite steaks - * see note', 'salt and pepper to taste', 'garlic powder to taste', '1 tablespoon olive oil', '2 - 4 pounds baby potatoes - diced', '2 - 6 tablespoons salted butter - soft enough to mash with a fork, one tablespoon per steak, plus two tablespoons for the potatoes', '2 teaspoons minced garlic', '1 teaspoon dried Italian herb blend', '1 teaspoon chopped fresh thyme', '1 teaspoon chopped fresh parsley'],
+      instructions: ['Preheat oven to 400 degrees.In a small bowl combine butter, garlic, and dried herbs and set aside.Season steaks generously with salt, pepper, and garlic powder on both sides.', 'Place skillet over medium - high heat and drizzle with oil.Sear steaks for 2 - 3 minutes one each side until nice and browned.Transfer to a plate and set aside.', 'Add potatoes to the skillet, season generously with salt, pepper, and garlic powder and saute 3 - 5 minutes until browned.Push potatoes to one side of the pan and return steaks to the other side of the pan.', 'Transfer to oven and cook for 15 - 20 minutes until potatoes are fork - tender and steak is cooked to your preferred doneness.',
+        'Immediately after removing from oven, place a dollop of the garlic butter on each steak and the rest on the potatoes and let it melt over the food before stirring the potatoes to coat in butter and then topping with chopped thyme and parsley before serving.'],
     },
     country: "USA",
   },
