@@ -14,7 +14,7 @@ function RecipeType({ data }) {
                 {
                     data.filter(recipe => recipe.type === recipeType).map(filteredRecipe => (
                         <Col sm={4}>
-                                <Link style={{textDecoration:"none",color:'black'}} to={`${filteredRecipe.title}`} element={<Recipe recipeData={filteredRecipe} />}>
+                                <Link style={{textDecoration:"none",color:'black'}} to={`${filteredRecipe.title}`}>
                                     <h3>{filteredRecipe.title}</h3>
                                     <Card style={{padding:6, width:350}}key={filteredRecipe.id} className='bg-dark text-white'>
                                         <Card.Img 
