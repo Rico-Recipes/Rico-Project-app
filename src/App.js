@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Home } from "./components/Home.js";
 import HomepageNavbar from "./components/HomepageNavbar";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Outlet } from "react-router-dom";
 
 import Recipes from "./components/Recipes";
 import RecipeType from "./components/RecipeType.js";
@@ -615,12 +615,17 @@ function App() {
         <Route path="" element={<Home />} />
         <Route
           path="recipes"
-          element={<Recipes data={filteredRecipesList} />}
-        />
-        <Route
-          path="recipes/:recipeType"
-          element={<RecipeType data={filteredRecipesList} />}
-        />
+          element={<Outlet />}
+        >
+          <Route
+            index
+            element={<Recipes data={filteredRecipesList} />}
+          />
+          <Route
+            path=":recipeType"
+            element={<RecipeType data={filteredRecipesList} />}
+          />
+        </Route>
         <Route
           path="recipes/breakfast/chilaquiles"
           element={<Recipe recipeData={DUMMY_DATA[0]} />}
