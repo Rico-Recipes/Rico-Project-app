@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import { Link, useParams, Outlet } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Recipe from './Recipe';
 
 function RecipeType({ data }) {
@@ -34,7 +34,6 @@ function RecipeType({ data }) {
                     ))
                 }
             </Row>
-            <Outlet />
         </Container>
     )
 };
