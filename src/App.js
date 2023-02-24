@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import { Home } from "./components/Home.js";
 import HomepageNavbar from "./components/HomepageNavbar";
 import { Routes, Route, Outlet } from "react-router-dom";
-
 import Recipes from "./components/Recipes";
 import RecipeType from "./components/RecipeType.js";
 import Recipe from "./components/Recipe";
 import { WorldTour } from "./components/WorldTour.js";
 import Footer from "./components/Footer.js";
+import Favorites from "./components/Favorites.js";
+
+
 
 
 
@@ -58,7 +60,7 @@ const DUMMY_DATA = [
     },
     country: "USA",
   },
-  
+
   {
     id: 3,
     title: "Eggs Benedict",
@@ -384,7 +386,7 @@ const DUMMY_DATA = [
         "Wait until the mixture has at least doubled in volume (after 1.5 h). Ideally, you should let it triple in size (at least 3 hours). Once the dough has risen, transfer it on a work surface.",
         "Divide it into 4 equal parts and shape them as balls using your hands. Once done, cover them with a clean cloth and let them stand for 30 minutes at room temperature, before using them to make your pizzas.",
         "Rip the pedicels off, washing the tomatoes very well and leaving them to dry.",
-        "Cut each tomato into two halves and remove the green part, also known as the pith. Squeeze the two halves of the tomato in a bowl or in a sink, to get rid of all the seeds.", 
+        "Cut each tomato into two halves and remove the green part, also known as the pith. Squeeze the two halves of the tomato in a bowl or in a sink, to get rid of all the seeds.",
         "Once you’ve repeated this process with all the tomato halves, put them in a steel pot, and cook the tomatoes on a stove’s hotplate, on low heat, turning them occasionally with a spoon, until dry and disintegrated.",
         "Now pass the tomatoes through a food mill. Once all tomatoes have been passed, transfer the resulting sauce in a smaller steel pot while you will again put on the hotplate.",
         "Add salt and oil to the sauce, and let it simmer over high heat, until you get the desired thickness.",
@@ -424,6 +426,8 @@ function App() {
     }
   };
 
+
+
   return (
     <div className="App">
       <header className="App-header"></header>
@@ -434,6 +438,8 @@ function App() {
       />
       <Routes>
         <Route path="" element={<Home />} />
+        <Route path="favorites" element={ <Favorites/>} />
+
         <Route
           path="recipes"
           element={<Outlet />}
