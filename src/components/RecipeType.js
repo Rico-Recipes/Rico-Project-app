@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, Outlet } from 'react-router-dom';
 import Recipe from './Recipe';
 
 function RecipeType({ data }) {
@@ -14,7 +14,7 @@ function RecipeType({ data }) {
                 {
                     data.filter(recipe => recipe.type === recipeType).map(filteredRecipe => (
                         <Col sm={4}>
-                                <Link style={{textDecoration:"none",color:'black'}} to={`${filteredRecipe.title}/${filteredRecipe.type}`} relative='path'  element={<Recipe />}>
+                                <Link style={{textDecoration:"none",color:'black'}} to={`${filteredRecipe.title}`} element={<Recipe recipeData={filteredRecipe} />}>
                                     <h3>{filteredRecipe.title}</h3>
                                     <Card style={{padding:6, width:350}}key={filteredRecipe.id} className='bg-dark text-white'>
                                         <Card.Img 
@@ -34,7 +34,7 @@ function RecipeType({ data }) {
                     ))
                 }
             </Row>
-
+            <Outlet />
         </Container>
     )
 };

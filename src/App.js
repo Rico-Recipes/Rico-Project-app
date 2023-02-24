@@ -618,18 +618,28 @@ function App() {
           element={<Outlet />}
         >
           <Route
-            index
+            path=""
             element={<Recipes data={filteredRecipesList} />}
           />
           <Route
             path=":recipeType"
-            element={<RecipeType data={filteredRecipesList} />}
-          />
+            element={<Outlet />}
+          >
+            <Route
+              path=""
+              element={<RecipeType data={filteredRecipesList} />}
+            />
+            <Route
+              path=":recipe"
+              element={<Outlet />}
+            >
+              <Route
+                path=""
+                element={<Recipe recipeData={filteredRecipesList} />}
+              />
+            </Route>
+          </Route>
         </Route>
-        <Route
-          path="recipes/breakfast/chilaquiles"
-          element={<Recipe recipeData={DUMMY_DATA[0]} />}
-        />
         <Route path="worldtour" element={<WorldTour />} />
       </Routes>
       <Footer />
