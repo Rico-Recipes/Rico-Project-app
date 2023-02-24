@@ -8,9 +8,7 @@ import RecipeType from "./components/RecipeType.js";
 import Recipe from "./components/Recipe";
 import { WorldTour } from "./components/WorldTour.js";
 import Footer from "./components/Footer.js";
-
-
-
+import { WorldTourFiltered } from "./components/WorldTourFiltered.js";
 
 const DUMMY_DATA = [
   {
@@ -52,13 +50,23 @@ const DUMMY_DATA = [
     img_src:
       "https://flavorthemoments.com/wp-content/uploads/2022/02/blueberry-overnight-oats-2.jpg",
     recipe_info: {
-      ingredients: ['2 cups old fashioned rolled oats', '2 tablespoons chia seeds', '2½ cups unsweetened almond milk', '3 tablespoons pure maple syrup', '1 cup fresh blueberries',],
-      instructions: ['Place the oats, chia seeds, almond milk and maple syrup in a large bowl.', 'Stir together until combined.Cover with plastic wrap and store in the fridge overnight', 'In the morning, stir in blueberries, leaving some for garnish, if desired, and divide into jars or bowls.',
-        'Top with nuts or coconut flakes, if desired, serve and enjoy!'],
+      ingredients: [
+        "2 cups old fashioned rolled oats",
+        "2 tablespoons chia seeds",
+        "2½ cups unsweetened almond milk",
+        "3 tablespoons pure maple syrup",
+        "1 cup fresh blueberries",
+      ],
+      instructions: [
+        "Place the oats, chia seeds, almond milk and maple syrup in a large bowl.",
+        "Stir together until combined.Cover with plastic wrap and store in the fridge overnight",
+        "In the morning, stir in blueberries, leaving some for garnish, if desired, and divide into jars or bowls.",
+        "Top with nuts or coconut flakes, if desired, serve and enjoy!",
+      ],
     },
     country: "USA",
   },
-  
+
   {
     id: 3,
     title: "Eggs Benedict",
@@ -66,8 +74,26 @@ const DUMMY_DATA = [
     img_src:
       "https://www.carolinescooking.com/wp-content/uploads/2019/03/eggs-Benedict-photo.jpg",
     recipe_info: {
-      ingredients: ['2 English muffins', '4 slices ham or Canadian bacon', '1 teaspoon white vinegar', '4 eggs', 'For the Hollandaise sauce', '2 egg yolks', '1 pinch cayenne pepper', '¼ teaspoon Dijon mustard', '1 tablespoon lemon juice', '4 tablespoon butter'],
-      instructions: ['Set a pot of water to boil for the eggs.', 'Split the English muffins and toast them.Set aside, keeping warm if possible.', 'If using Canadian bacon, cook it in skillet or under broiler, or warm if using ham.', 'Make or warm your Hollandaise sauce.For easy blender sauce, put the yolks, cayenne, mustard and lemon juice in a blender container and blend until smooth. Melt the butter and pour into the yolk mixture with the blender running so that it combines smoothly.Set aside.', 'Lastly, poach the eggs. Add the vinegar to the boiling water, then carefully crack the eggs in to the simmering water. Cook for around 3 - 4 minutes until the whites are translucent but the yolks are still slightly soft.Remove with a slotted spoon.', 'Assemble the eggs Benedict - make stacks with half a muffin at the bottom, topped with bacon / ham, then a poached egg and topped with the Hollandaise sauce.'],
+      ingredients: [
+        "2 English muffins",
+        "4 slices ham or Canadian bacon",
+        "1 teaspoon white vinegar",
+        "4 eggs",
+        "For the Hollandaise sauce",
+        "2 egg yolks",
+        "1 pinch cayenne pepper",
+        "¼ teaspoon Dijon mustard",
+        "1 tablespoon lemon juice",
+        "4 tablespoon butter",
+      ],
+      instructions: [
+        "Set a pot of water to boil for the eggs.",
+        "Split the English muffins and toast them.Set aside, keeping warm if possible.",
+        "If using Canadian bacon, cook it in skillet or under broiler, or warm if using ham.",
+        "Make or warm your Hollandaise sauce.For easy blender sauce, put the yolks, cayenne, mustard and lemon juice in a blender container and blend until smooth. Melt the butter and pour into the yolk mixture with the blender running so that it combines smoothly.Set aside.",
+        "Lastly, poach the eggs. Add the vinegar to the boiling water, then carefully crack the eggs in to the simmering water. Cook for around 3 - 4 minutes until the whites are translucent but the yolks are still slightly soft.Remove with a slotted spoon.",
+        "Assemble the eggs Benedict - make stacks with half a muffin at the bottom, topped with bacon / ham, then a poached egg and topped with the Hollandaise sauce.",
+      ],
     },
     country: "USA",
   },
@@ -78,59 +104,173 @@ const DUMMY_DATA = [
     img_src:
       "https://hips.hearstapps.com/hmg-prod/images/190322-ham-sandwich-horizontal-1553721016.png",
     recipe_info: {
-      ingredients: ['FOR THE HERB MAYO', '1 c.mayonnaise', '2 tbsp.freshly chopped parsley', '2 tsp.freshly chopped thyme', '1 tbsp.extra - virgin olive oil', '2 cloves garlic, minced', 'FOR THE SANDWICH', '8 slices crusty bread, such as sourdough or ciabatta', '1 / 2 c.herb mayo', '1 / 4 c.Dijon mustard', '12 slices deli ham', '8 slices provolone', '1 arugula', '1 tomato, thinly sliced', '1 / 2 red onion, thinly sliced'],
-      instructions: ['In a medium bowl whisk together mayonnaise, parsley, thyme, oil, and garlic.', 'Spread 2 tablespoons herb mayo on 4 slices of bread.', 'Spread 1 tablespoon mustard on the other 4 slices of bread.', 'Top each mayo slice of bread with 3 slices of ham, 2 slices of provolone, arugula, a couple slices of tomato, and red onion.', 'Top with remaining bread slices, mustard side down.'],
+      ingredients: [
+        "FOR THE HERB MAYO",
+        "1 c.mayonnaise",
+        "2 tbsp.freshly chopped parsley",
+        "2 tsp.freshly chopped thyme",
+        "1 tbsp.extra - virgin olive oil",
+        "2 cloves garlic, minced",
+        "FOR THE SANDWICH",
+        "8 slices crusty bread, such as sourdough or ciabatta",
+        "1 / 2 c.herb mayo",
+        "1 / 4 c.Dijon mustard",
+        "12 slices deli ham",
+        "8 slices provolone",
+        "1 arugula",
+        "1 tomato, thinly sliced",
+        "1 / 2 red onion, thinly sliced",
+      ],
+      instructions: [
+        "In a medium bowl whisk together mayonnaise, parsley, thyme, oil, and garlic.",
+        "Spread 2 tablespoons herb mayo on 4 slices of bread.",
+        "Spread 1 tablespoon mustard on the other 4 slices of bread.",
+        "Top each mayo slice of bread with 3 slices of ham, 2 slices of provolone, arugula, a couple slices of tomato, and red onion.",
+        "Top with remaining bread slices, mustard side down.",
+      ],
     },
     country: "USA",
   },
   {
     id: 5,
-    title: "dry meat loaf",
+    title: "Dry Meat Loaf",
     type: "dinner",
     img_src:
       "https://assets.epicurious.com/photos/57eab27ecf9338f824b78b4b/master/w_1000,h_667,c_limit/old-fashioned-meat-loaf.jpg",
     recipe_info: {
-      ingredients: ['Meatloaf Ingredients:', '2 lbs ground beef, 85 % or 90 % lean', '1 med onion, finely chopped', '2 large eggs', '3 garlic cloves, minced', '3 Tbsp ketchup', '3 Tbsp fresh parsley, finely chopped', '3 / 4 cup Panko breadcrumbs', '1 / 3 cup milk', '1 ½ tsp salt, or to taste', '1 ½ tsp Italian seasoning', '¼ tsp ground black pepper', '½ tsp ground paprika', 'Meatloaf Sauce Ingredients:', '3 / 4 cup ketchup', '1 ½ tsp white vinegar', '2 ½ Tbsp brown sugar', '1 tsp garlic powder', '½ tsp onion powder', '¼ tsp ground black pepper', '¼ tsp salt'],
-      instructions: ['US Customary - Metric', 'Line a 9”x5” loaf pan with parchment paper and preheat oven to 375°F.', 'In a large bowl, add all of the ingredients for the meatloaf.Mix well to combine.', 'Add meat to the loaf pan, gently press meat down and shape evenly and bake meatloaf at 375˚F for 40 minutes.', 'In a small bowl, mix all of the ingredients together for the sauce.Spread the sauce over meatloaf then return to oven and bake additional 15-20 minutes or until the internal temperature is 160˚F.Rest meatloaf 10 minutes before slicing.Drizzle with baking juices from the pan.'],
+      ingredients: [
+        "Meatloaf Ingredients:",
+        "2 lbs ground beef, 85 % or 90 % lean",
+        "1 med onion, finely chopped",
+        "2 large eggs",
+        "3 garlic cloves, minced",
+        "3 Tbsp ketchup",
+        "3 Tbsp fresh parsley, finely chopped",
+        "3 / 4 cup Panko breadcrumbs",
+        "1 / 3 cup milk",
+        "1 ½ tsp salt, or to taste",
+        "1 ½ tsp Italian seasoning",
+        "¼ tsp ground black pepper",
+        "½ tsp ground paprika",
+        "Meatloaf Sauce Ingredients:",
+        "3 / 4 cup ketchup",
+        "1 ½ tsp white vinegar",
+        "2 ½ Tbsp brown sugar",
+        "1 tsp garlic powder",
+        "½ tsp onion powder",
+        "¼ tsp ground black pepper",
+        "¼ tsp salt",
+      ],
+      instructions: [
+        "US Customary - Metric",
+        "Line a 9”x5” loaf pan with parchment paper and preheat oven to 375°F.",
+        "In a large bowl, add all of the ingredients for the meatloaf.Mix well to combine.",
+        "Add meat to the loaf pan, gently press meat down and shape evenly and bake meatloaf at 375˚F for 40 minutes.",
+        "In a small bowl, mix all of the ingredients together for the sauce.Spread the sauce over meatloaf then return to oven and bake additional 15-20 minutes or until the internal temperature is 160˚F.Rest meatloaf 10 minutes before slicing.Drizzle with baking juices from the pan.",
+      ],
     },
     country: "USA",
   },
   {
     id: 6,
-    title: "caesar salad",
+    title: "Caesar Salad",
     type: "lunch",
     img_src:
       "https://natashaskitchen.com/wp-content/uploads/2019/01/Caesar-Salad-Recipe-3.jpg",
     recipe_info: {
-      ingredients: ['For the Croutons:', '1 / 2 French Baguette, cut in half and thinly sliced(1 / 4" thick)', '3 Tbsp extra virgin olive oil', '1 tsp minced garlic, 2 small cloves', '2 Tbsp grated parmesan cheese', 'Caesar Salad dressing:', '2 small garlic cloves, minced(1 tsp)', '2 tsp dijon mustard', '1 tsp Worcestershire sauce', '2 tsp fresh lemon juice', '1 1 / 2 tsp red wine vinegar', '1 / 3 cup extra virgin olive oil', '1 / 2 tsp sea salt, or to taste', '1 / 8 tsp black pepper, plus more to serve', 'For the Caesar Salad:', '1 large romaine lettuce, (or 2 small heads romaine)', '1 / 3 cup parmesan cheese, shredded or shaved'],
-      instructions: ['US Customary - Metric', 'How to Make Croutons:', 'Preheat oven to 350˚F.Cut the baguette in half lengthwise through the top of the baguette then slice diagonally into 1 / 4" thick pieces. Place the breads onto a baking sheet.', 'In a small bowl, combine 3 Tbsp extra virgin olive oil and 1 tsp of finely minced garlic.Drizzle the garlic oil over the croutons and sprinkle the top with 2 Tbsp grated parmesan cheese.', 'Toss until evenly coated.Spread in a single layer over the baking sheet and bake at 350˚F until light golden and crisp(10- 12 minutes), or to desired crispness.', 'How to Make Caesar Salad Dressing:', '1	In a small bowl, whisk together garlic, dijon, Worcestershire, lemon juice and red wine vinegar.', 'Slowly drizzle in extra virgin olive oil while whisking constantly.', 'Whisk in 1 / 2 tsp salt and 1 / 8 tsp black pepper, or season to taste.', 'How to Make Caesar Salad:', '1	Rinse, dry and chop or tear the romaine into bite - sized pieces.Place in a large serving bowl and sprinkle generously with shredded parmesan cheese and cooled croutons.Drizzle with caesar dressing and toss gently until lettuce is evenly coated.'],
+      ingredients: [
+        "For the Croutons:",
+        '1 / 2 French Baguette, cut in half and thinly sliced(1 / 4" thick)',
+        "3 Tbsp extra virgin olive oil",
+        "1 tsp minced garlic, 2 small cloves",
+        "2 Tbsp grated parmesan cheese",
+        "Caesar Salad dressing:",
+        "2 small garlic cloves, minced(1 tsp)",
+        "2 tsp dijon mustard",
+        "1 tsp Worcestershire sauce",
+        "2 tsp fresh lemon juice",
+        "1 1 / 2 tsp red wine vinegar",
+        "1 / 3 cup extra virgin olive oil",
+        "1 / 2 tsp sea salt, or to taste",
+        "1 / 8 tsp black pepper, plus more to serve",
+        "For the Caesar Salad:",
+        "1 large romaine lettuce, (or 2 small heads romaine)",
+        "1 / 3 cup parmesan cheese, shredded or shaved",
+      ],
+      instructions: [
+        "US Customary - Metric",
+        "How to Make Croutons:",
+        'Preheat oven to 350˚F.Cut the baguette in half lengthwise through the top of the baguette then slice diagonally into 1 / 4" thick pieces. Place the breads onto a baking sheet.',
+        "In a small bowl, combine 3 Tbsp extra virgin olive oil and 1 tsp of finely minced garlic.Drizzle the garlic oil over the croutons and sprinkle the top with 2 Tbsp grated parmesan cheese.",
+        "Toss until evenly coated.Spread in a single layer over the baking sheet and bake at 350˚F until light golden and crisp(10- 12 minutes), or to desired crispness.",
+        "How to Make Caesar Salad Dressing:",
+        "1	In a small bowl, whisk together garlic, dijon, Worcestershire, lemon juice and red wine vinegar.",
+        "Slowly drizzle in extra virgin olive oil while whisking constantly.",
+        "Whisk in 1 / 2 tsp salt and 1 / 8 tsp black pepper, or season to taste.",
+        "How to Make Caesar Salad:",
+        "1	Rinse, dry and chop or tear the romaine into bite - sized pieces.Place in a large serving bowl and sprinkle generously with shredded parmesan cheese and cooled croutons.Drizzle with caesar dressing and toss gently until lettuce is evenly coated.",
+      ],
     },
     country: "USA",
   },
   {
     id: 7,
-    title: "steak and potatoes",
+    title: "Steak & Potatoes",
     type: "dinner",
     img_src:
       "https://www.lecremedelacrumb.com/wp-content/uploads/2019/03/feat-500x500.jpg",
     recipe_info: {
-      ingredients: ['2 - 4 petite steaks - * see note', 'salt and pepper to taste', 'garlic powder to taste', '1 tablespoon olive oil', '2 - 4 pounds baby potatoes - diced', '2 - 6 tablespoons salted butter - soft enough to mash with a fork, one tablespoon per steak, plus two tablespoons for the potatoes', '2 teaspoons minced garlic', '1 teaspoon dried Italian herb blend', '1 teaspoon chopped fresh thyme', '1 teaspoon chopped fresh parsley'],
-      instructions: ['Preheat oven to 400 degrees.In a small bowl combine butter, garlic, and dried herbs and set aside.Season steaks generously with salt, pepper, and garlic powder on both sides.', 'Place skillet over medium - high heat and drizzle with oil.Sear steaks for 2 - 3 minutes one each side until nice and browned.Transfer to a plate and set aside.', 'Add potatoes to the skillet, season generously with salt, pepper, and garlic powder and saute 3 - 5 minutes until browned.Push potatoes to one side of the pan and return steaks to the other side of the pan.', 'Transfer to oven and cook for 15 - 20 minutes until potatoes are fork - tender and steak is cooked to your preferred doneness.',
-        'Immediately after removing from oven, place a dollop of the garlic butter on each steak and the rest on the potatoes and let it melt over the food before stirring the potatoes to coat in butter and then topping with chopped thyme and parsley before serving.'],
+      ingredients: [
+        "2 - 4 petite steaks - * see note",
+        "salt and pepper to taste",
+        "garlic powder to taste",
+        "1 tablespoon olive oil",
+        "2 - 4 pounds baby potatoes - diced",
+        "2 - 6 tablespoons salted butter - soft enough to mash with a fork, one tablespoon per steak, plus two tablespoons for the potatoes",
+        "2 teaspoons minced garlic",
+        "1 teaspoon dried Italian herb blend",
+        "1 teaspoon chopped fresh thyme",
+        "1 teaspoon chopped fresh parsley",
+      ],
+      instructions: [
+        "Preheat oven to 400 degrees.In a small bowl combine butter, garlic, and dried herbs and set aside.Season steaks generously with salt, pepper, and garlic powder on both sides.",
+        "Place skillet over medium - high heat and drizzle with oil.Sear steaks for 2 - 3 minutes one each side until nice and browned.Transfer to a plate and set aside.",
+        "Add potatoes to the skillet, season generously with salt, pepper, and garlic powder and saute 3 - 5 minutes until browned.Push potatoes to one side of the pan and return steaks to the other side of the pan.",
+        "Transfer to oven and cook for 15 - 20 minutes until potatoes are fork - tender and steak is cooked to your preferred doneness.",
+        "Immediately after removing from oven, place a dollop of the garlic butter on each steak and the rest on the potatoes and let it melt over the food before stirring the potatoes to coat in butter and then topping with chopped thyme and parsley before serving.",
+      ],
     },
     country: "USA",
   },
-  // {
-  //   id: 8,
-  //   title: 'tamales',
-  //   type: 'dinner',
-  //   img_src: 'https://muybuenocookbook.com/wp-content/uploads/2021/12/tamales-steaming-1365x2048.jpg',
-  //   recipe_info: {
-  //     ingredients: ['7-8 pounds pork butt or pork shoulder', '2 1/2 cups water', '1 tablespoon sea salt', '6 1/2 cups Red Chile Sauce', '1 Batch Tamale Masa', 'Corn husks, hojas'],
-  //     instructions: ['Place pork, water, and salt in a slow cooker and cook for 6 to 8 hours. After meat is cooked, remove from the slow cooker and let cool to room temperature. Shred pork and remove fat while shredding, reserving fat. (Usually, after pork is cooked and shredded, you will be left with about 3 pounds of meat.)', 'In a blender combine the cooled broth from the cooked pork and the leftover fat pieces. Blend and reserve for using when making tamale masa and filling. Broth can be kept, tightly covered, for 1 week in the refrigerator. The broth also freezes well and will keep for 4 to 6 months.', 'Heat the 6 tablespoons broth in a large skillet. Add flour and whisk for at least 4 to 5 minutes.', 'Add red chile sauce and salt, stir, and cook for 10 minutes. The chile sauce will be very thick at this time.', 'Add the 3 pounds shredded pork and stir so all the pork is well coated with the red chile sauce. Simmer for at least 10 minutes. Let mixture cool before filling tamales.', 'Soak corn husks in water for an hour before using, rinse well with running water to take off any dust or corn husk fibers. To keep corn husks pliable and easy to work with, keep in water while filling tamales. Place a handful of wet corn husks in a colander to drain before using.', 'Place the wide end of the husk on the palm of your hand, narrow end is at the top. Starting at the middle of the husk spread 2 tablespoons of the masa with the back of a spoon in a rectangle or oval shape, using a downward motion towards the wide-bottom edge. Do not spread the masa to the ends; leave about a 2-inch border on the left and right sides of the husk.', 'Spoon 1 1/2 tablespoons of your chosen filling down the center of the masa. Fold both sides to the center; finish off by bringing the pointed end of the husk toward the filled end. Make sure it’s a snug closure so the tamale will not open during steaming. Secure by tying a thin strip of corn husk around the tamal. This will keep the tamale from unwrapping during the steaming process, especially if the husk is too thick and will not stay folded.', 'Use a deep pot or tamale steamer to steam tamales. If using a tamale steamer fill with water up to the fill line. Set the tamale rack over the water. Place tamales upright, with fold against the sides of the other tamales to keep them from unfolding. Cover pot with a tightly fitting lid. Set heat on high and bring to a boil, about 15 minutes. Lower heat and simmer for 2 1/2 to 3 hours. Keep lid on tightly. To test if done, put one tamal on a plate and take off the corn husk. If it comes off without sticking to the tamal they are done.']
-  //   },
-  //   country: 'Mexico'
-  // },
+  {
+    id: 8,
+    title: "Tamales",
+    type: "dinner",
+    img_src:
+      "https://muybuenocookbook.com/wp-content/uploads/2021/12/tamales-steaming-1365x2048.jpg",
+    recipe_info: {
+      ingredients: [
+        "7-8 pounds pork butt or pork shoulder",
+        "2 1/2 cups water",
+        "1 tablespoon sea salt",
+        "6 1/2 cups Red Chile Sauce",
+        "1 Batch Tamale Masa",
+        "Corn husks, hojas",
+      ],
+      instructions: [
+        "Place pork, water, and salt in a slow cooker and cook for 6 to 8 hours. After meat is cooked, remove from the slow cooker and let cool to room temperature. Shred pork and remove fat while shredding, reserving fat. (Usually, after pork is cooked and shredded, you will be left with about 3 pounds of meat.)",
+        "In a blender combine the cooled broth from the cooked pork and the leftover fat pieces. Blend and reserve for using when making tamale masa and filling. Broth can be kept, tightly covered, for 1 week in the refrigerator. The broth also freezes well and will keep for 4 to 6 months.",
+        "Heat the 6 tablespoons broth in a large skillet. Add flour and whisk for at least 4 to 5 minutes.",
+        "Add red chile sauce and salt, stir, and cook for 10 minutes. The chile sauce will be very thick at this time.",
+        "Add the 3 pounds shredded pork and stir so all the pork is well coated with the red chile sauce. Simmer for at least 10 minutes. Let mixture cool before filling tamales.",
+        "Soak corn husks in water for an hour before using, rinse well with running water to take off any dust or corn husk fibers. To keep corn husks pliable and easy to work with, keep in water while filling tamales. Place a handful of wet corn husks in a colander to drain before using.",
+        "Place the wide end of the husk on the palm of your hand, narrow end is at the top. Starting at the middle of the husk spread 2 tablespoons of the masa with the back of a spoon in a rectangle or oval shape, using a downward motion towards the wide-bottom edge. Do not spread the masa to the ends; leave about a 2-inch border on the left and right sides of the husk.",
+        "Spoon 1 1/2 tablespoons of your chosen filling down the center of the masa. Fold both sides to the center; finish off by bringing the pointed end of the husk toward the filled end. Make sure it’s a snug closure so the tamale will not open during steaming. Secure by tying a thin strip of corn husk around the tamal. This will keep the tamale from unwrapping during the steaming process, especially if the husk is too thick and will not stay folded.",
+        "Use a deep pot or tamale steamer to steam tamales. If using a tamale steamer fill with water up to the fill line. Set the tamale rack over the water. Place tamales upright, with fold against the sides of the other tamales to keep them from unfolding. Cover pot with a tightly fitting lid. Set heat on high and bring to a boil, about 15 minutes. Lower heat and simmer for 2 1/2 to 3 hours. Keep lid on tightly. To test if done, put one tamal on a plate and take off the corn husk. If it comes off without sticking to the tamale they are done.",
+      ],
+    },
+    country: "Mexico",
+  },
   {
     id: 9,
     title: "Enchiladas Rojas",
@@ -169,7 +309,7 @@ const DUMMY_DATA = [
   },
   {
     id: 10,
-    title: "butter chicken",
+    title: "Butter Chicken",
     type: "dinner",
     img_src:
       "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/butter-chicken-recipe.jpg",
@@ -277,7 +417,7 @@ const DUMMY_DATA = [
         "1 scotch bonnet pepper, left whole- do not cut!",
         "6 sprigs fresh thyme",
         "4 cups beef broth",
-        "1 (14-ounce) can butter beans, liquid drained"
+        "1 (14-ounce) can butter beans, liquid drained",
       ],
       instructions: [
         "Add the oxtail pieces into a large bowl or gallon-sized ziplock bag. Then add in the browning sauce, worcestershire, brown sugar, curry powder, allspice, paprika, salt/pepper- to taste, onion, garlic, ginger, and scallions. Use your hands to massage all the aromatics and spices into the oxtail pieces, massaging very well to ensure the oxtail pieces are thoroughly coated.",
@@ -288,14 +428,14 @@ const DUMMY_DATA = [
         "Reduce the heat to medium-low and cover the pot with a lid. Allow the oxtail to stew for 2 – 2 1/2 hours, covered- until oxtail pieces are meltingly tender and falling apart.",
         "Empty the drained can of butter beans into the pot, gently stirring to combine. Let the butter beans cook in the oxtail stew for another 30 minutes until tender.",
         "Discard the herb stems, bay leaves, and scotch bonnet pepper from the pot. Skim any fat off the top of the liquid, as needed. If you’d like to thicken the stew gravy in the pot (see notes directly below for cornstarch slurry option), place over medium-high heat. Cook, gently stirring, for a bit until the liquid reaches your desired consistency. Afterwards, taste and adjust with more salt/pepper, as desired.",
-        "Serve this Jamaican oxtail stew immediately. I love serving this oxtail stew in shallow bowls with a helping of extra stew gravy and alongside side items like rice and peas and plantains, too. Enjoy!"
+        "Serve this Jamaican oxtail stew immediately. I love serving this oxtail stew in shallow bowls with a helping of extra stew gravy and alongside side items like rice and peas and plantains, too. Enjoy!",
       ],
     },
     country: "Jamaica",
   },
   {
     id: 13,
-    title: "Rice & Peass",
+    title: "Rice & Peas",
     type: "dinner",
     img_src:
       "https://www.butterbeready.com/wp-content/uploads/2022/09/DK6A5627.jpg",
@@ -313,7 +453,7 @@ const DUMMY_DATA = [
         "1 scotch bonnet pepper, left whole- do not cut!",
         "4-6 sprigs fresh thyme",
         "3 cups chicken stock or broth, plus more as needed",
-        "2 cups uncooked long grain rice, rinsed until the water runs clear"
+        "2 cups uncooked long grain rice, rinsed until the water runs clear",
       ],
       instructions: [
         "In a large stock pot or dutch oven over medium heat; add in the drained beans, onion, scallions, garlic, scotch bonnet pepper, thyme, bay leaves, allspice, salt/pepper-to taste, stock/broth, and coconut milk. Stir all the ingredients together and cover the pot with a lid. Allow the beans to cook until mostly tender, about 1 hour.",
@@ -321,7 +461,7 @@ const DUMMY_DATA = [
         "Back to the peas, check peas for tenderness by (carefully) testing: use a spoon to gather a bean and softly pinch, looking for a firm but semi-tender feel. At this point, the peas may not be completely soft but will also not be rock-hard either (they’ll continue cooking later).",
         "Once peas have achieved this state, add in the rinsed rice and butter, and stir to fully combine. Immediately reduce the heat to the lowest setting and cover the pot with a lid.",
         "Let the rice cook for 25-30 minutes. Keep an eye on the rice as it may cook faster or take a bit longer. If you see that some of the liquid has evaporated too quickly before the rice has cooked through, add about 1/4 cup more stock/broth to replenish, as needed. Then remove the pot from heat and let rice sit, covered/undisturbed, for at least 10-15 minutes to continue cooking, steaming through.",
-        "Then take a fork and fluff rice, discarding the scotch bonnet pepper, thyme sprigs, and bay leaves. Taste the rice and adjust seasoning with more salt/pepper, if desired. Serve these rice and peas immediately alongside your favorite main entrees or as-is. Enjoy!"
+        "Then take a fork and fluff rice, discarding the scotch bonnet pepper, thyme sprigs, and bay leaves. Taste the rice and adjust seasoning with more salt/pepper, if desired. Serve these rice and peas immediately alongside your favorite main entrees or as-is. Enjoy!",
       ],
     },
     country: "Jamaica",
@@ -343,14 +483,14 @@ const DUMMY_DATA = [
         "2 teaspoons olive oil (or vegetable oil)",
         "4 large eggs",
         "4 teaspoons soy sauce (or to taste)",
-        "4 teaspoons homemade chili oil , to taste (or toasted sesame oil for non-spicy congee)"
+        "4 teaspoons homemade chili oil , to taste (or toasted sesame oil for non-spicy congee)",
       ],
       instructions: [
         "Add the rice, chicken broth, ginger, green onion and salt into your Instant Pot. Cover and seal the lid. Select high pressure, and set the timer to 25 minutes. If you’re using a pressure cooker, seal the lid and cook over medium heat until pressure is reached. Then reduce to low heat and cook for 25 minutes. Once done, let the pressure release naturally.",
         "Once the pressure has fully released, open the lid and stir the congee with a ladle. It might look thin once it’s done cooking, but it will thicken up a bit once you stir it well and let it sit for a few minutes. If you want to change the texture of the congee, turn on the “Saute” function and let it boil down for a few minutes and stir constantly, until it turns thicker. Or you can pour in a bit of hot water and stir it if you want to thin it out.",
         "Make the toppings while the congee is cooking. Add the bacon to a nonstick skillet and cook over medium heat. Cook, flipping occasionally, until the bacon has turned golden brown and crispy. If it starts to smoke too much, turn to medium-low heat. Once done, set aside to let cool slightly. Then cut or crumble the bacon into small pieces.",
         "You can use the bacon fat to cook the eggs if you prefer. If not, wipe the pan clean with a paper towel and add the oil. Heat over medium heat until oil is hot. Add the eggs. Let cook, using your spatula to arrange the egg whites so they form rounded shapes. Cook the eggs until the whites are set and the yolks are still runny. Or you can also cook the eggs until your desired doneness.",
-        "Spoon the congee into individual serving bowls. For each bowl, top with the egg, drizzle with 1 teaspoon soy sauce, sprinkle with bacon crumbles and green onions (if desired), and finish up with homemade chili oil. Enjoy it while it’s hot!"
+        "Spoon the congee into individual serving bowls. For each bowl, top with the egg, drizzle with 1 teaspoon soy sauce, sprinkle with bacon crumbles and green onions (if desired), and finish up with homemade chili oil. Enjoy it while it’s hot!",
       ],
     },
     country: "China",
@@ -372,7 +512,7 @@ const DUMMY_DATA = [
         "8 basil leaves",
         "fresh mozzarella",
         "4 teaspoons soy sauce (or to taste)",
-        "4 teaspoons homemade chili oil , to taste (or toasted sesame oil for non-spicy congee)"
+        "4 teaspoons homemade chili oil , to taste (or toasted sesame oil for non-spicy congee)",
       ],
       instructions: [
         "To prepare the dough for the pizza, start pouring the flour in a large mixer bowl.",
@@ -384,13 +524,13 @@ const DUMMY_DATA = [
         "Wait until the mixture has at least doubled in volume (after 1.5 h). Ideally, you should let it triple in size (at least 3 hours). Once the dough has risen, transfer it on a work surface.",
         "Divide it into 4 equal parts and shape them as balls using your hands. Once done, cover them with a clean cloth and let them stand for 30 minutes at room temperature, before using them to make your pizzas.",
         "Rip the pedicels off, washing the tomatoes very well and leaving them to dry.",
-        "Cut each tomato into two halves and remove the green part, also known as the pith. Squeeze the two halves of the tomato in a bowl or in a sink, to get rid of all the seeds.", 
+        "Cut each tomato into two halves and remove the green part, also known as the pith. Squeeze the two halves of the tomato in a bowl or in a sink, to get rid of all the seeds.",
         "Once you’ve repeated this process with all the tomato halves, put them in a steel pot, and cook the tomatoes on a stove’s hotplate, on low heat, turning them occasionally with a spoon, until dry and disintegrated.",
         "Now pass the tomatoes through a food mill. Once all tomatoes have been passed, transfer the resulting sauce in a smaller steel pot while you will again put on the hotplate.",
         "Add salt and oil to the sauce, and let it simmer over high heat, until you get the desired thickness.",
         "Then turn off the heat and add the whole basil leaves to the sauce or coarsely chopped by hand.",
         "Flatten out each dough ball. Assemble pizza with sauce and cheese.",
-        "Bake until cheese is melted and dough is golden. Enjoy!"
+        "Bake until cheese is melted and dough is golden. Enjoy!",
       ],
     },
     country: "Italy",
@@ -434,26 +574,14 @@ function App() {
       />
       <Routes>
         <Route path="" element={<Home />} />
-        <Route
-          path="recipes"
-          element={<Outlet />}
-        >
-          <Route
-            path=""
-            element={<Recipes data={filteredRecipesList} />}
-          />
-          <Route
-            path=":recipeType"
-            element={<Outlet />}
-          >
+        <Route path="recipes" element={<Outlet />}>
+          <Route path="" element={<Recipes data={filteredRecipesList} />} />
+          <Route path=":recipeType" element={<Outlet />}>
             <Route
               path=""
               element={<RecipeType data={filteredRecipesList} />}
             />
-            <Route
-              path=":recipe"
-              element={<Outlet />}
-            >
+            <Route path=":recipe" element={<Outlet />}>
               <Route
                 path=""
                 element={<Recipe recipeData={filteredRecipesList} />}
@@ -461,7 +589,19 @@ function App() {
             </Route>
           </Route>
         </Route>
+        <Route
+          path="recipes/:recipeType"
+          element={<RecipeType data={filteredRecipesList} />}
+        />
+        <Route
+          path="recipes/breakfast/chilaquiles"
+          element={<Recipe recipeData={DUMMY_DATA[0]} />}
+        />
         <Route path="worldtour" element={<WorldTour />} />
+        <Route
+          path="worldtour/:country"
+          element={<WorldTourFiltered data={filteredRecipesList} />}
+        />
       </Routes>
       <Footer />
     </div>
