@@ -102,82 +102,82 @@ Listeners
     document.addEventListener("touchmove", handleMouseMove);
     document.addEventListener("touchend", handleMouseUp);
     return () => {
-    document.removeEventListener("mousewheel", handleWheel);
-    document.removeEventListener("mousedown", handleMouseDown);
-    document.removeEventListener("mousemove", handleMouseMove);
-    document.removeEventListener("mouseup", handleMouseUp);
-    document.removeEventListener("touchstart", handleMouseDown);
-    document.removeEventListener("touchmove", handleMouseMove);
-    document.removeEventListener("touchend", handleMouseUp);
-    }
+      document.removeEventListener("mousewheel", handleWheel);
+      document.removeEventListener("mousedown", handleMouseDown);
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseup", handleMouseUp);
+      document.removeEventListener("touchstart", handleMouseDown);
+      document.removeEventListener("touchmove", handleMouseMove);
+      document.removeEventListener("touchend", handleMouseUp);
+    };
   }, []);
 
   return (
     <>
       <div class="xarousel">
-        <div class="xarousel-item">
-          <div class="xarousel-box">
-            <div class="title">Italy</div>
-            <div class="num">01</div>
-            <Link href='/worldtour/italy'>
+        <Link to="/worldtour/italy">
+          <div class="xarousel-item">
+            <div class="xarousel-box">
+              <div class="title">Italy</div>
+              <div class="num">01</div>
               <img src="./assets/images/Italy.jpg" alt="colosseum" />
-            </Link>
+            </div>
           </div>
-        </div>
-        <div class="xarousel-item">
-          <div class="xarousel-box">
-            <div class="title">Mexico</div>
-            <div class="num">02</div>
-            <Link href='/worldtour/mexico'>
+        </Link>
+        <Link to="/worldtour/mexico">
+          <div class="xarousel-item">
+            <div class="xarousel-box">
+              <div class="title">Mexico</div>
+              <div class="num">02</div>
               <img src="./assets/images/Mexico.jpg" alt="aztec-temple" />
-            </Link>  
+            </div>
           </div>
-        </div>
-        <div class="xarousel-item">
-          <div class="xarousel-box">
-            <div class="title">France</div>
-            <div class="num">03</div>
-            <Link href='/worldtour/france'>
+        </Link>
+        <Link to="/worldtour/france">
+          <div class="xarousel-item">
+            <div class="xarousel-box">
+              <div class="title">France</div>
+              <div class="num">03</div>
               <img src="./assets/images/Paris.jpg" alt="effiel-tower" />
-            </Link>  
+            </div>
           </div>
-        </div>
-        <div class="xarousel-item">
-          <div class="xarousel-box">
-            <div class="title">India</div>
-            <div class="num">04</div>
-            <Link href='/worldtour/india'>
+        </Link>
+        <Link to="/worldtour/india">
+          <div class="xarousel-item">
+            <div class="xarousel-box">
+              <div class="title">India</div>
+              <div class="num">04</div>
               <img src="./assets/images/India.jpg" alt="taj-mahal" />
-            </Link>  
+            </div>
           </div>
-        </div>
-        <div class="xarousel-item">
-          <div class="xarousel-box">
-            <div class="title">China</div>
-            <div class="num">05</div>
-            <Link href='/worldtour/china'>
+        </Link>
+        <Link to="/worldtour/china">
+          <div class="xarousel-item">
+            <div class="xarousel-box">
+              <div class="title">China</div>
+              <div class="num">05</div>
               <img src="./assets/images/China.jpg" alt="great-wall-of-china" />
-            </Link>
+            </div>
           </div>
-        </div>
-        <div class="xarousel-item">
-          <div class="xarousel-box">
-            <div class="title">Jamaica</div>
-            <div class="num">06</div>
-            <Link href='/worldtour/jamaica'>
+        </Link>
+        <Link to="/worldtour/jamaica">
+          <div class="xarousel-item">
+            <div class="xarousel-box">
+              <div class="title">Jamaica</div>
+              <div class="num">06</div>
               <img src="./assets/images/Jamaica.jpg" alt="woman-with-flag" />
-            </Link>
+            </div>
           </div>
-        </div>
-        <div class="xarousel-item">
-          <div class="xarousel-box">
-            <div class="title">U.S.A</div>
-            <div class="num">07</div>
-            <Link href='/worldtour/usa'>
+        </Link>
+        <Link to="/worldtour/usa">
+          <div class="xarousel-item">
+            <div class="xarousel-box">
+              <div class="title">U.S.A</div>
+              <div class="num">07</div>
               <img src="./assets/images/USA.jpg" alt="statue-of-liberty" />
-            </Link>
+            </div>
           </div>
-        </div>
+        </Link>
       </div>
     </>
   );
