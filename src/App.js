@@ -41,7 +41,7 @@ const DUMMY_DATA = [
         "Serve warm. Serve warm garnished with avocado or guacamole, crema, queso fresco, and/or fried eggs, if desired.",
       ],
     },
-    country: "Mexico",
+    country: "mexico",
   },
   {
     id: 2,
@@ -64,7 +64,7 @@ const DUMMY_DATA = [
         "Top with nuts or coconut flakes, if desired, serve and enjoy!",
       ],
     },
-    country: "USA",
+    country: "usa",
   },
 
   {
@@ -95,7 +95,7 @@ const DUMMY_DATA = [
         "Assemble the eggs Benedict - make stacks with half a muffin at the bottom, topped with bacon / ham, then a poached egg and topped with the Hollandaise sauce.",
       ],
     },
-    country: "USA",
+    country: "usa",
   },
   {
     id: 4,
@@ -129,7 +129,7 @@ const DUMMY_DATA = [
         "Top with remaining bread slices, mustard side down.",
       ],
     },
-    country: "USA",
+    country: "usa",
   },
   {
     id: 5,
@@ -169,7 +169,7 @@ const DUMMY_DATA = [
         "In a small bowl, mix all of the ingredients together for the sauce.Spread the sauce over meatloaf then return to oven and bake additional 15-20 minutes or until the internal temperature is 160˚F.Rest meatloaf 10 minutes before slicing.Drizzle with baking juices from the pan.",
       ],
     },
-    country: "USA",
+    country: "usa",
   },
   {
     id: 6,
@@ -211,7 +211,7 @@ const DUMMY_DATA = [
         "1	Rinse, dry and chop or tear the romaine into bite - sized pieces.Place in a large serving bowl and sprinkle generously with shredded parmesan cheese and cooled croutons.Drizzle with caesar dressing and toss gently until lettuce is evenly coated.",
       ],
     },
-    country: "USA",
+    country: "usa",
   },
   {
     id: 7,
@@ -240,7 +240,7 @@ const DUMMY_DATA = [
         "Immediately after removing from oven, place a dollop of the garlic butter on each steak and the rest on the potatoes and let it melt over the food before stirring the potatoes to coat in butter and then topping with chopped thyme and parsley before serving.",
       ],
     },
-    country: "USA",
+    country: "usa",
   },
   {
     id: 8,
@@ -269,7 +269,7 @@ const DUMMY_DATA = [
         "Use a deep pot or tamale steamer to steam tamales. If using a tamale steamer fill with water up to the fill line. Set the tamale rack over the water. Place tamales upright, with fold against the sides of the other tamales to keep them from unfolding. Cover pot with a tightly fitting lid. Set heat on high and bring to a boil, about 15 minutes. Lower heat and simmer for 2 1/2 to 3 hours. Keep lid on tightly. To test if done, put one tamal on a plate and take off the corn husk. If it comes off without sticking to the tamale they are done.",
       ],
     },
-    country: "Mexico",
+    country: "mexico",
   },
   {
     id: 9,
@@ -305,7 +305,7 @@ const DUMMY_DATA = [
         "Add the garnish of your choice and enjoy!",
       ],
     },
-    country: "Mexico",
+    country: "mexico",
   },
   {
     id: 10,
@@ -350,7 +350,7 @@ const DUMMY_DATA = [
         "Garnish with chopped cilantro and serve with fresh, hot garlic butter rice and fresh homemade Naan bread!",
       ],
     },
-    country: "India",
+    country: "india",
   },
   {
     id: 11,
@@ -387,7 +387,7 @@ const DUMMY_DATA = [
         "Serve immediately, garnished with thyme sprigs, if desired, or let it cool, cover, and refrigerate overnight. To reheat, skim any fat that has congealed on the surface of the stew and place the pot of coq au vin over medium-low heat. Garnish with thyme sprigs before serving, if desired.",
       ],
     },
-    country: "France",
+    country: "france",
   },
   {
     id: 12,
@@ -431,7 +431,7 @@ const DUMMY_DATA = [
         "Serve this Jamaican oxtail stew immediately. I love serving this oxtail stew in shallow bowls with a helping of extra stew gravy and alongside side items like rice and peas and plantains, too. Enjoy!",
       ],
     },
-    country: "Jamaica",
+    country: "jamaica",
   },
   {
     id: 13,
@@ -464,7 +464,7 @@ const DUMMY_DATA = [
         "Then take a fork and fluff rice, discarding the scotch bonnet pepper, thyme sprigs, and bay leaves. Taste the rice and adjust seasoning with more salt/pepper, if desired. Serve these rice and peas immediately alongside your favorite main entrees or as-is. Enjoy!",
       ],
     },
-    country: "Jamaica",
+    country: "jamaica",
   },
   {
     id: 14,
@@ -493,7 +493,7 @@ const DUMMY_DATA = [
         "Spoon the congee into individual serving bowls. For each bowl, top with the egg, drizzle with 1 teaspoon soy sauce, sprinkle with bacon crumbles and green onions (if desired), and finish up with homemade chili oil. Enjoy it while it’s hot!",
       ],
     },
-    country: "China",
+    country: "china",
   },
   {
     id: 15,
@@ -533,7 +533,7 @@ const DUMMY_DATA = [
         "Bake until cheese is melted and dough is golden. Enjoy!",
       ],
     },
-    country: "Italy",
+    country: "italy",
   },
 ];
 
