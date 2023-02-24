@@ -1,11 +1,13 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import { Link, useParams } from "react-router-dom";
-import Recipe from "./Recipe";
+import { useParams, Link } from "react-router-dom";
+// import Recipe from "./Recipe";
+// import { WorldTour } from "./WorldTour";
 
-function RecipeType({ data }) {
-  const { recipeType } = useParams();
-
+function WorldTourFiltered({ data }) {
+  const { country } = useParams();
+  console.log(country);
+  console.log(data);
   return (
     <Container>
       <Row
@@ -17,14 +19,13 @@ function RecipeType({ data }) {
         }}
       >
         {data
-          .filter((recipe) => recipe.type === recipeType)
+          .filter((recipe) => recipe.country === country)
           .map((filteredRecipe) => (
             <Col sm={4}>
+              <h2>{filteredRecipe.title}</h2>
               <Link
-                style={{ textDecoration: "none", color: "black" }}
-                to={`${filteredRecipe.title}`}
+                to={`/recipes/${filteredRecipe.type}/${filteredRecipe.title}`}
               >
-                <h3>{filteredRecipe.title}</h3>
                 <Card
                   style={{ padding: 6, width: 350 }}
                   key={filteredRecipe.id}
@@ -38,7 +39,7 @@ function RecipeType({ data }) {
                     object-fit="cover"
                   />
                   <Card.ImgOverlay>
-                    <Card.Title>{filteredRecipe.type}</Card.Title>
+                    <Card.Title>{filteredRecipe.country}</Card.Title>
                   </Card.ImgOverlay>
                 </Card>
               </Link>
@@ -49,4 +50,4 @@ function RecipeType({ data }) {
   );
 }
 
-export default RecipeType;
+export { WorldTourFiltered };
