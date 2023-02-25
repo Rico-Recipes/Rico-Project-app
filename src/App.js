@@ -611,10 +611,7 @@ function App() {
           path="recipes/:recipeType"
           element={<RecipeType data={filteredRecipesList} />}
         />
-        <Route
-          path="recipes/breakfast/chilaquiles"
-          element={<Recipe recipeData={DUMMY_DATA[0]} />}
-        />
+        
         <Route path="worldtour" element={<WorldTour />} />
         <Route
           path="worldtour/:country"
