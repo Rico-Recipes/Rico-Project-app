@@ -10,6 +10,7 @@ import {
 } from "react-bootstrap";
 import { InputGroup, FormControl } from "react-bootstrap";
 import logo from "../ricologo.jpg";
+import { NavLink } from "react-router-dom";
 
 function HomepageNavbar({ handleRecipeSearch, handleSubmit }) {
   return (
@@ -18,45 +19,113 @@ function HomepageNavbar({ handleRecipeSearch, handleSubmit }) {
         <Row>
           <Navbar bg="white" expand="sm">
             <Col>
-              <Nav.Link href="/">
-                <Image
-                  src={logo}
-                  roundedCircle
-                  width="150"
-                  height="150"
-                  className="d-inline-block align-top"
-                  alt="React Bootstrap logo"
-                />
+              <Nav.Link>
+                <NavLink to="/">
+                  <Image
+                    src={logo}
+                    roundedCircle
+                    width="150"
+                    height="150"
+                    className="d-inline-block align-top"
+                    alt="React Bootstrap logo"
+                  />
+                </NavLink>
               </Nav.Link>
             </Col>
             <Col>
               <Nav>
-                <Nav.Link href="/favorites">My favorites</Nav.Link>
+                <Nav.Link>
+                  <NavLink
+                    to='/favorites'
+                    style={{
+                      color: 'black',
+                      textDecoration: 'none',
+                      opacity: 0.8
+                    }}
+                  >
+                    My favorites
+                  </NavLink>
+                </Nav.Link>
               </Nav>
             </Col>
             <Col>
               <Nav>
-                <Nav.Link href="/recipes">All recipes</Nav.Link>
+                <Nav.Link>
+                  <NavLink
+                    to='/recipes'
+                    style={{
+                      color: 'black',
+                      textDecoration: 'none',
+                      opacity: 0.8
+                    }}
+                  >
+                    All recipes
+                  </NavLink>
+                </Nav.Link>
               </Nav>
             </Col>
             <Col>
               <Nav>
-                <Nav.Link href="/recipes/breakfast">Breakfast</Nav.Link>
+                <Nav.Link>
+                  <NavLink
+                    to='/recipes/breakfast'
+                    style={{
+                      color: 'black',
+                      textDecoration: 'none',
+                      opacity: 0.8
+                    }}
+                  >
+                    Breakfast
+                  </NavLink>
+                </Nav.Link>
               </Nav>
             </Col>
             <Col>
               <Nav>
-                <Nav.Link href="/recipes/lunch">Lunch</Nav.Link>
+                <Nav.Link>
+                  <NavLink
+                    to='/recipes/lunch'
+                    style={{
+                      color: 'black',
+                      textDecoration: 'none',
+                      opacity: 0.8
+                    }}
+                  >
+                    Lunch
+                  </NavLink>
+                </Nav.Link>
               </Nav>
             </Col>
             <Col>
               <Nav>
-                <Nav.Link href="/recipes/dinner">Dinner</Nav.Link>
+                <Nav.Link>
+                  <NavLink
+                    to='/recipes/dinner'
+                    style={{
+                      color: 'black',
+                      textDecoration: 'none',
+                      opacity: 0.8
+                    }}
+                  >
+                    Dinner
+                  </NavLink>
+                </Nav.Link>
               </Nav>
             </Col>
             <Col>
               <Nav className="me-auto">
-                <Nav.Link href="/worldtour">World Tour</Nav.Link>
+                <Nav.Link>
+                  <NavLink
+                    to='/worldtour'
+                    style={{
+                      color: 'black',
+                      textDecoration: 'none',
+                      opacity: 0.8
+                    }}
+                  >
+                    World Tour
+                  </NavLink>
+                </Nav.Link>
               </Nav>
             </Col>
             <Col xs={4}>
@@ -71,7 +140,7 @@ function HomepageNavbar({ handleRecipeSearch, handleSubmit }) {
               </InputGroup>
             </Col>
             <Col xs={2}>
-              <Button id="search" className="mr-0" onClick={handleSubmit}>
+              <Button id="search" className="mr-0" onClick={handleSubmit} style={{backgroundColor: 'black'}}>
                 Search
               </Button>
             </Col>

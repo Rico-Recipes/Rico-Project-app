@@ -30,11 +30,14 @@ function Recipes({ data }) {
                 </Card.ImgOverlay>
               </Card>
             </Link>
-                            <Button
-                                onClick={()=>addFavorite(recipe)}
-                            >
-                                Add to Favorites
-                            </Button>
+            <Button
+                onClick={() => addFavorite(recipe)}
+                style={{
+                    backgroundColor: 'black'
+                }}
+            >
+                Add to Favorites
+            </Button>
           </Col>
         ))}
       </Row>
