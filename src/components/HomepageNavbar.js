@@ -31,6 +31,11 @@ function HomepageNavbar({ handleRecipeSearch, handleSubmit }) {
             </Col>
             <Col>
               <Nav>
+                <Nav.Link href="/recipes">All recipes</Nav.Link>
+              </Nav>
+            </Col>
+            <Col>
+              <Nav>
                 <Nav.Link href="/recipes/breakfast">Breakfast</Nav.Link>
               </Nav>
             </Col>
