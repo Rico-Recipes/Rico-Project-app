@@ -15,7 +15,7 @@ import Favorites from "./components/Favorites.js";
 
 
 
-const DUMMY_DATA = [
+export const DUMMY_DATA = [
   {
     id: 1,
     title: "Chilaquiles",
@@ -581,7 +581,12 @@ function App() {
       />
       <Routes>
         <Route path="" element={<Home />} />
-        <Route path="favorites" element={ <Favorites/>} />
+        <Route path="favorites" element={ <Outlet />}>
+          <Route
+            path=""
+            element={<Favorites />}
+          />
+        </Route>
 
         <Route
           path="recipes"
@@ -623,4 +628,4 @@ function App() {
   );
 }
 
-export default App;
+export { App };

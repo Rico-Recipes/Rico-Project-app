@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Button, Card } from "react-bootstrap";
 import { useParams } from 'react-router-dom';
 import RecipeCard from "./RecipeCard";
 
 function Recipe({ recipeData }) {
+
   const { recipe } = useParams();
   return (
     <>
@@ -30,6 +31,7 @@ function Recipe({ recipeData }) {
                 </ol>
               </Card.Body>
             </Card>
+
           </React.Fragment>
         ))
       }

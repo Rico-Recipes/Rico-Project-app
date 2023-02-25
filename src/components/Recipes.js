@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 
 import { Link } from "react-router-dom";
 import { Container, Row, Col, Button, Card } from "react-bootstrap";
 import Recipe from "./Recipe";
+import { FavoritesContext } from "../FavoritesProvider";
 
 function Recipes({ data }) {
+
+    const { addFavorite } = useContext(FavoritesContext);
   return (
     <Container width={40}>
       <Row>
@@ -27,6 +30,14 @@ function Recipes({ data }) {
                 </Card.ImgOverlay>
               </Card>
             </Link>
+            <Button
+                onClick={() => addFavorite(recipe)}
+                style={{
+                    backgroundColor: 'black'
+                }}
+            >
+                Add to Favorites
+            </Button>
           </Col>
         ))}
       </Row>

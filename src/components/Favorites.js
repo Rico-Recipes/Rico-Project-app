@@ -2,26 +2,27 @@ import React, { useContext } from 'react';
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { FavoritesContext, FavoritesProvider } from '../FavoritesProvider';
+import { FavoritesContext } from '../FavoritesProvider';
 import { Recipes } from './Recipes';
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 
 function Favorites() {
-   const  {favorites}  = useContext(FavoritesContext);
+   const  {favorites }  = useContext(FavoritesContext);
+
     return (
         <Container width={40}>
 
             <Row>
 
                 {
-                    favorites.length === 0 ? 
-                    <div>No Favorites</div> : favorites.map(recipe => (
+                    favorites?.length
+                    ?   (favorites.map(recipe => (
                     
                         <Col sm={4}>
                             <Link
-                                to={`${recipe.type}/${recipe.title}`}
+                                to={`/recipes/${recipe.type}/${recipe.title}`}
                             >
                                 <Card key={recipe.id} style={{ padding: 6, width: 350, margin: 30 }} className='bg-dark text-white'>
 
@@ -37,8 +38,13 @@ function Favorites() {
                                 </Card>
                             </Link>
                         </Col>
-                    ))
+                    )))
+                    :   (
+                            <div>Your favorites are empty.</div>
+                        )
                 }
+            </Row>
+            <Row>
             </Row>
             <Row>
                 <Col sm={1}>
