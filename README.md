@@ -13,6 +13,8 @@ THEN enjoy it and plan my next day meals!
 * To use the app,first visit our site! .  
 * If you want to run it from your local machine:
 - Go to our official repo, listed below
+- clone the repo to your local machine
+- npm i before anything
 ## Instructions to run app in dev server:
 ** In one terminal window:
 ```bash
@@ -33,16 +35,14 @@ THEN enjoy it and plan my next day meals!
 Please find below a quick video on how this app works. 
 
 
-[Rico]()//paste here the link of our recording
+[Rico](https://www.youtube.com/watch?v=zCwIiSqj5oU)
 
 
 ## Github Repo
 Click on the link below to find the link to our repo!
-["Rico"](https://github.com/Rico-Recipes/Rico-Project-app
+[Rico](https://github.com/Rico-Recipes/Rico-Project-app
 
-## Deployment link
-Click on the link below to find the link to our app!
-["Rico"]() paste link to website here
+
 
 ## Contributors 
 * [Daniela Velarde](https://github.com/davelarde)
