@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { FavoritesContext } from '../FavoritesProvider';
-import { Recipes } from './Recipes';
+// import { Recipes } from './Recipes';
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 

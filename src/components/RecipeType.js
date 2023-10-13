@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
-import Recipe from "./Recipe";
+// import Recipe from "./Recipe";
 
 function RecipeType({ data }) {
   const { recipeType } = useParams();

@@ -1,6 +1,6 @@
 import React from "react";
 // import { Container } from "react-bootstrap";
-import Image from 'react-bootstrap/Image';
+// import Image from 'react-bootstrap/Image';
 import  Carousel  from "react-bootstrap/Carousel";
 
 

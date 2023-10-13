@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react';
 
-import { DUMMY_DATA } from './App';
+// import { DUMMY_DATA } from './App';
 export const FavoritesContext = createContext();
 
 

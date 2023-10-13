@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
-import { Button, Card } from "react-bootstrap";
+import React from "react";
+import { Card } from "react-bootstrap";
 import { useParams } from 'react-router-dom';
-import RecipeCard from "./RecipeCard";
+// import RecipeCard from "./RecipeCard";
 
 function Recipe({ recipeData }) {
 
